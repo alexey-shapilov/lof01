@@ -1,2 +1,231 @@
 @import '/css/font/fira/fira.css';
 @import '/css/font/Proxima-Nova/proxima.css';
+@import '/css/font/HelveticaNeue/helveticaneue.css';
+@import "normolize.css";
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-size: 100%;
+  background: url(/css/img/comppattern2.png);
+}
+
+.b-head_socials {
+  li {
+    display: inline-block;
+  }
+  margin-right: 7.14%;
+}
+
+.clearfix {
+  clear: both;
+}
+
+$head-height: 116px;
+
+.b-head {
+  background: #eff3f7;
+  height: 116px;
+}
+
+.b-head_logo {
+  height: $head-height;
+  font-family: helveticaneue_bold;
+  float: left;
+  font-size: 36px;
+  font-weight: bold;
+  color: #6f727e;
+  margin-left: 7.14%;
+}
+
+.b-head_logo-element1 {
+  margin-top: 23px;
+  border-bottom: #6f727e solid 1px;
+}
+
+.b-head_logo-element2 {
+  font-size: 14px;
+  font-family: helveticaneue_thin;
+  margin-top: 5px;
+  margin-left: 1px;
+}
+
+.b-head_socials {
+  float: right;
+  display: block;
+  margin-top: 35px;
+}
+
+@mixin b-head_socials-item {
+  display: block;
+  float: left;
+  height: 46px;
+  width: 46px;
+  margin-left: 24px;
+  &:hover {
+    background-position: -46px;
+    cursor: pointer;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.b-head_socials-vk {
+  @include b-head_socials-item;
+  background: url("/css/img/vk.png");
+}
+
+.b-head_socials-twitter {
+  @include b-head_socials-item;
+  background: url("/css/img/twitter.png");
+}
+
+.b-head_socials-facebook {
+  @include b-head_socials-item;
+  background: url("/css/img/facebook.png");
+}
+
+.b-head_socials-github {
+  @include b-head_socials-item;
+  background: url("/css/img/github.png");
+}
+
+.split-line {
+  width: 100%;
+  height: 3px;
+  background: url('/css/img/split.png') repeat-y;
+  background-size: 100%
+}
+
+// Меню навигации
+
+$nav_width: 250px;
+.b-nav {
+  margin-top: 39px;
+  padding-top: 1px;
+  font-family: fira_sansbook;
+  margin-left: 15.71%;
+  width: $nav_width;
+  ul {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.b-menu {
+  width: 100%;
+  height: 219px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #eff3f7;
+}
+
+.b-menu_items {
+  padding: 0;
+}
+
+.b-menu_items-item {
+  $menu_item_height: 73px;
+  font-size: 21px;
+  color: #fff;
+  a {
+    display: block;
+    color: #959aa8;
+    line-height: $menu_item_height;
+    width: 202px;
+    padding-left: 18px;
+    margin: 0 auto;
+
+  }
+
+  & a:hover {
+    color: #3ba8c0;
+    border-bottom: 2px solid #3ba8c0;
+    height: $menu_item_height - 2;
+  }
+
+  &.active {
+    height: $menu_item_height;
+    background-color: #3ba8c0;
+    a {
+      color: #ffffff;
+    }
+  }
+
+  &:first-child.active{
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+  }
+  &:last-child.active{
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+
+// Контакты
+$contact_element_height: 40px;
+.b-contacts {
+  padding-top: 1px;
+  margin-top: 22px;
+}
+
+.b-contacts_items {
+  padding: 0;
+}
+
+$ico_size: 38px;
+.ico {
+  float: left;
+  width: $ico_size;
+  height: $ico_size;
+}
+
+.b-contacts_items-item {
+  font-size: 17px;
+  color: white;
+  background: #3ba8c0;
+  padding-left: 21px;
+  height: $contact_element_height;
+  line-height: $contact_element_height;
+
+  a {
+    color: white;
+  }
+
+  &:first-child {
+    font-size: 21px;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+  }
+  &:nth-child(2){
+    .ico {
+      background: url('/css/img/emailico.png');
+    }
+    background: #41b9d4;
+  }
+  &:nth-child(3){
+    .ico {
+      background: url('/css/img/phoneico.png');
+    }
+    background: #48cbe8;
+  }
+  &:last-child {
+    .ico {
+      background: url('/css/img/skypeico.png');
+    }
+    background: #51daf8;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+  }
+}

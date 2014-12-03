@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'helveticaneue_bold';
+    src: url('HelveticaNeueCyr-Bold.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'helveticaneue_thin';
+    src: url('HelveticaNeueCyr-Thin.otf') format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}

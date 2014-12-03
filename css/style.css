@@ -1,4 +1,196 @@
 @import url(/css/font/fira/fira.css);
 @import url(/css/font/Proxima-Nova/proxima.css);
+@import url(/css/font/HelveticaNeue/helveticaneue.css);
+@import url(normolize.css);
+ul {
+  list-style: none; }
 
-/*# sourceMappingURL=style.css.map */
+body {
+  font-size: 100%;
+  background: url(/css/img/comppattern2.png); }
+
+.b-head_socials {
+  margin-right: 7.14%; }
+  .b-head_socials li {
+    display: inline-block; }
+
+.clearfix {
+  clear: both; }
+
+.b-head {
+  background: #eff3f7;
+  height: 116px; }
+
+.b-head_logo {
+  height: 116px;
+  font-family: helveticaneue_bold;
+  float: left;
+  font-size: 36px;
+  font-weight: bold;
+  color: #6f727e;
+  margin-left: 7.14%; }
+
+.b-head_logo-element1 {
+  margin-top: 23px;
+  border-bottom: #6f727e solid 1px; }
+
+.b-head_logo-element2 {
+  font-size: 14px;
+  font-family: helveticaneue_thin;
+  margin-top: 5px;
+  margin-left: 1px; }
+
+.b-head_socials {
+  float: right;
+  display: block;
+  margin-top: 35px; }
+
+.b-head_socials-vk {
+  display: block;
+  float: left;
+  height: 46px;
+  width: 46px;
+  margin-left: 24px;
+  background: url("/css/img/vk.png"); }
+  .b-head_socials-vk:hover {
+    background-position: -46px;
+    cursor: pointer; }
+  .b-head_socials-vk:first-child {
+    margin-left: 0; }
+
+.b-head_socials-twitter {
+  display: block;
+  float: left;
+  height: 46px;
+  width: 46px;
+  margin-left: 24px;
+  background: url("/css/img/twitter.png"); }
+  .b-head_socials-twitter:hover {
+    background-position: -46px;
+    cursor: pointer; }
+  .b-head_socials-twitter:first-child {
+    margin-left: 0; }
+
+.b-head_socials-facebook {
+  display: block;
+  float: left;
+  height: 46px;
+  width: 46px;
+  margin-left: 24px;
+  background: url("/css/img/facebook.png"); }
+  .b-head_socials-facebook:hover {
+    background-position: -46px;
+    cursor: pointer; }
+  .b-head_socials-facebook:first-child {
+    margin-left: 0; }
+
+.b-head_socials-github {
+  display: block;
+  float: left;
+  height: 46px;
+  width: 46px;
+  margin-left: 24px;
+  background: url("/css/img/github.png"); }
+  .b-head_socials-github:hover {
+    background-position: -46px;
+    cursor: pointer; }
+  .b-head_socials-github:first-child {
+    margin-left: 0; }
+
+.split-line {
+  width: 100%;
+  height: 3px;
+  background: url("/css/img/split.png") repeat-y;
+  background-size: 100%; }
+
+.b-nav {
+  margin-top: 39px;
+  padding-top: 1px;
+  font-family: fira_sansbook;
+  margin-left: 15.71%;
+  width: 250px; }
+  .b-nav ul {
+    margin: 0; }
+  .b-nav a {
+    text-decoration: none; }
+
+.b-menu {
+  width: 100%;
+  height: 219px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #eff3f7; }
+
+.b-menu_items {
+  padding: 0; }
+
+.b-menu_items-item {
+  font-size: 21px;
+  color: #fff; }
+  .b-menu_items-item a {
+    display: block;
+    color: #959aa8;
+    line-height: 73px;
+    width: 202px;
+    padding-left: 18px;
+    margin: 0 auto; }
+  .b-menu_items-item a:hover {
+    color: #3ba8c0;
+    border-bottom: 2px solid #3ba8c0;
+    height: 71px; }
+  .b-menu_items-item.active {
+    height: 73px;
+    background-color: #3ba8c0; }
+    .b-menu_items-item.active a {
+      color: #ffffff; }
+  .b-menu_items-item:first-child.active {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0; }
+  .b-menu_items-item:last-child.active {
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px; }
+
+.b-contacts {
+  padding-top: 1px;
+  margin-top: 22px; }
+
+.b-contacts_items {
+  padding: 0; }
+
+.ico {
+  float: left;
+  width: 38px;
+  height: 38px; }
+
+.b-contacts_items-item {
+  font-size: 17px;
+  color: white;
+  background: #3ba8c0;
+  padding-left: 21px;
+  height: 40px;
+  line-height: 40px; }
+  .b-contacts_items-item a {
+    color: white; }
+  .b-contacts_items-item:first-child {
+    font-size: 21px;
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0; }
+  .b-contacts_items-item:nth-child(2) {
+    background: #41b9d4; }
+    .b-contacts_items-item:nth-child(2) .ico {
+      background: url("/css/img/emailico.png"); }
+  .b-contacts_items-item:nth-child(3) {
+    background: #48cbe8; }
+    .b-contacts_items-item:nth-child(3) .ico {
+      background: url("/css/img/phoneico.png"); }
+  .b-contacts_items-item:last-child {
+    background: #51daf8;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px; }
+    .b-contacts_items-item:last-child .ico {
+      background: url("/css/img/skypeico.png"); }
