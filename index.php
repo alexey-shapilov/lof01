@@ -7,9 +7,9 @@ define('PATH_CONTENT_STATIC', PATH_CONTENT . '/static');
 
 $query = explode('/', $_GET['q']);
 
-//если корневой уровень сайта, будем загружать скрипт home
+//если корневой уровень сайта, будем загружать скрипт about
 if (!$query[0]) {
-    $query[0] = 'home';
+    $query[0] = 'about';
 }
 
 // будем считать что может быть только один уровень сайта
