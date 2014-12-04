@@ -2,7 +2,7 @@
 if (!defined('INIT')) exit('No direct script access allowed');
 $active_menu = $query[0];
 ?>
-<div class="b-nav clearfix">
+<div class="b-nav left">
     <div class="b-menu">
         <ul class="b-menu_items">
             <li class="b-menu_items-item<?=($active_menu=='about'?' active':'')?>"><a href="/about">Обо мне</a></li>

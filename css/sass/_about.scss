@@ -1,0 +1,173 @@
+$block_bg_color: #eff3f7;
+$padding-left: 20px;
+
+.fs15 {
+  font-family: fira_sansbook;
+  font-size: 15px;
+}
+
+.padding-left {
+  padding-left: $padding-left;
+}
+
+.b-main-info {
+  height: 324px;
+  background: $block_bg_color;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.b-main-info_title {
+  width: 320px;
+  margin: 0;
+  margin-bottom: 16px;
+  color: #3ba8c0;
+  font-weight: normal;
+  padding: 14px 0px 12px 20px;
+  border-bottom: 2px solid #3ba8c0;
+}
+
+.b-main-info_portrait {
+  padding-left: $padding-left;
+  img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 5px solid #3ba8c0;
+    display: block;
+    width: 190px;
+    height: 190px;
+  }
+}
+
+.b-main-info_wrapper {
+  font-family: fira_sansmedium;
+  font-size: 17px;
+  color: #58697a;
+  padding-left: 35px;
+}
+
+.b-main-info_info {
+  padding: 0;
+  margin: 0;
+}
+
+.b-main-info_info-item {
+  margin-top: 13px;
+  &:first-child {
+    margin-top: 6px;
+  }
+}
+
+.b-main-info_tags {
+  margin-top: 12px;
+}
+
+.b-main-info_tags-list {
+  width: 200px;
+  margin-left: $padding-left;
+  margin-top: -3px;
+}
+
+.b-main-info_tags-list_tag {
+  background: -moz-linear-gradient(top, #3ba8c0 0%, #3ba8c0 50%, #2e8ca2 50%, #2e8ca2 100%);
+  background: -webkit-linear-gradient(top, #3ba8c0 0%, #3ba8c0 50%, #2e8ca2 50%, #2e8ca2 100%);
+  background: -o-linear-gradient(top, #3ba8c0 0%, #3ba8c0 50%, #2e8ca2 50%, #2e8ca2 100%);
+  background: -ms-linear-gradient(top, #3ba8c0 0%, #3ba8c0 50%, #2e8ca2 50%, #2e8ca2 100%);
+  background: linear-gradient(top, #3ba8c0 0%, #3ba8c0 50%, #2e8ca2 50%, #2e8ca2 100%);
+  color: white;
+  padding: 2px 13px;
+  font-size: 14px;
+
+  font-family: proximacond_semibold;
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  line-height: 30px;
+}
+
+//Опыт работы
+
+.b-experience {
+  @extend .b-main-info;
+  height: 235px;
+  margin-top: 25px;
+}
+
+.b-experience_title {
+  @extend .b-main-info_title;
+  width: 189px;
+}
+
+.b-experience-items {
+  font-family: fira_sansbook;
+  display: block;
+  padding-left: 65px;
+}
+
+.b-experience-items-item {
+  margin-top: 35px;
+  height: 35px;
+  .wrapico {
+    width: 41px;
+  }
+  .ico {
+    margin: 0 auto;
+    width: 36px;
+    height: 34px;
+    background: url("/css/img/bagico.png");
+  }
+}
+
+.b-experience-items-item-desc {
+  margin-left: 26px;
+  margin-top: -5px;
+  h6 {
+    font-size: 17px;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    height: 20px;
+  }
+  span {
+    font-family: fira_sanslight;
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+
+// Образование
+
+.b-education {
+  @extend .b-experience;
+}
+
+.b-education_title {
+  @extend .b-experience_title;
+  width: 194px;
+}
+
+.b-education_items {
+  @extend .b-experience-items;
+}
+
+.b-education_items-item {
+  @extend .b-experience-items-item;
+  .ico {
+    width: 41px;
+    height: 23px;
+    background: url("/css/img/educico.png");
+  }
+  .ico2 {
+    margin: 0 auto;
+    width: 26px;
+    height: 32px;
+    background: url("/css/img/kursico.png");
+  }
+}
+
+.b-education_items-item-desc {
+  @extend .b-experience-items-item-desc;
+}
