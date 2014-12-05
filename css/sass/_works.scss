@@ -1,0 +1,250 @@
+.b-works {
+  @extend .b-main-info;
+  padding: 0 0 26px 0;
+}
+
+.items-grid {
+  float: left;
+  padding: 0 2.31% 0 2.31%;
+}
+
+.row {
+  margin-top: 25px;
+}
+
+.row::after {
+  display: block;
+  content: ' ';
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+@for $i from 1 through 3 {
+  .items-grid.col-#{$i} {
+    width: 33.33% * $i;
+  }
+}
+
+.b-works_title {
+  @extend .b-main-info_title;
+  width: 182px;
+}
+
+.b-works_items {
+  padding: 0 5px 0 5px;
+}
+
+.b-works_items-item {
+  img {
+    display: block;
+    border: 3px solid #3ba8c0;
+    width: 181px;
+    height: 127px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+  }
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: fira_sanslight;
+}
+
+.b-works_items-item_url {
+  margin-top: 12px;
+  display: block;
+  text-decoration: none;
+  font-size: 13px;
+  color: #3ba8c0;
+}
+
+.b-works_items-item_desc {
+  height: 33px;
+  font-size: 15px;
+  color: #4a545d;
+  overflow: hidden;
+  line-height: 15px;
+}
+
+.b-works_items-item_add {
+  a {
+    display: block;
+    width: 186px;
+    height: 134px;
+    background: url("/css/img/workico.png") no-repeat;
+    background-position: center 34px;
+    text-align: center;
+    font-family: fira_sanslight;
+    font-size: 13px;
+    border: 1px dashed #3ba8c0;
+    color: #3ba8c0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding-top: 76px;
+  }
+}
+
+// Модальное окно
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(88, 105, 122, 0.75);
+  z-index: 10000;
+  display: none;
+}
+
+.vertical-align {
+  width: 362px;
+  margin: 0 auto;
+}
+
+.b-form-modal {
+  width: 362px;
+  height: 483px;
+  -webkit-border-radius: 4px/7px;
+  -moz-border-radius: 4px/7px;
+  border-radius: 4px/7px;
+  background-color: #eff3f7;
+  -webkit-box-shadow: 0 6px 12px 1px rgba(13, 16, 7, .35);
+  -moz-box-shadow: 0 6px 12px 1px rgba(13, 16, 7, .35);
+  box-shadow: 0 6px 12px 1px rgba(13, 16, 7, .35);
+  label {
+    padding-left: 21px;
+    display: block;
+    font-family: fira_sansbook;
+    font-size: 17px;
+    color: #959aa8;
+  }
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.modal:target {
+  display: block;
+}
+
+.b-form-modal_btn-close {
+  display: block;
+  height: 25px;
+  width: 25px;
+  background: url('/css/img/closeico.png');
+  position: absolute;
+  right: 12px;
+  top: 10px;
+}
+
+.b-form-modal_title {
+  font-family: fira_sansregular;
+  font-size: 25px;
+  color: white;
+  padding: 6px 0 7px 12px;
+  height: 31px;
+  background: #48cbe8;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.b-form-modal_title-underline {
+  height: 9px;
+  background: #67dffa;
+}
+
+.b-form-modal_inputs-input-group {
+  margin-top: 8px;
+}
+
+$b-form-modal_input_width: 300px;
+
+.b-form-modal_inputs-edit {
+  display: block;
+  margin: 0 auto;
+  width: $b-form-modal_input_width;
+  height: 37px;
+  line-height: 39px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #48cbe8;
+  color: #48cbe8;
+  font-family: fira_sanslight;
+  font-size: 13px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+.b-form-modal_inputs-ta {
+//  box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+  width: $b-form-modal_input_width;
+  height: 91px;
+  border: 1px solid #48cbe8;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #48cbe8;
+  font-family: fira_sanslight;
+  font-size: 13px;
+  padding: 13px 9px 5px 9px;
+}
+
+.download {
+  margin: 0 auto;
+  width: $b-form-modal_input_width + 20;
+  height: 41px;
+  .b-form-modal_inputs-edit {
+    float: left;
+    width: $b-form-modal_input_width - 51;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+  }
+
+  .btn-download {
+    height: 41px;
+    width: 52px;
+    border: none;
+    background: url("/css/img/downloadico.png");
+    float: left;
+  }
+}
+
+.b-form-modal_btn-submit {
+  box-sizing: border-box;
+  width: 139px;
+  height: 31px;
+  padding-top: 3px;
+  background: #48cbe8;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 4px 0 0 #3ba8c0;
+  color: white;
+  font-family: fira_sansbook;
+  font-size: 19px;
+  margin: 10px auto 0;
+  display: block;
+}
+
+.b-form-modal_btn-submit:hover {
+  height: 35px;
+  box-shadow: none;
+}

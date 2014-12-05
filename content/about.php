@@ -5,8 +5,8 @@ ob_start();
         <div class="b-main-info">
             <h1 class="b-main-info_title">Основная информация</h1>
 
-            <div class="b-main-info_portrait">
-                <img class="left" src="/css/img/a.jpg" alt="Моё фото"/>
+            <div class="b-main-info_portrait left">
+                <img src="/css/img/a.jpg" alt="Моё фото"/>
             </div>
             <div class="b-main-info_wrapper left">
                 <ul class="b-main-info_info">
@@ -30,12 +30,12 @@ ob_start();
                         <span class="b-main-info_tags-list_tag">html</span>&nbsp;
                         <span class="b-main-info_tags-list_tag">css</span>&nbsp;
                         <span class="b-main-info_tags-list_tag">javascript</span>&nbsp;
-                        <span class="b-main-info_tags-list_tag">gulp</span>&nbsp;
+                        <span class="b-main-info_tags-list_tag">PHP</span>&nbsp;
+                        <span class="b-main-info_tags-list_tag">Java</span>&nbsp;
                         <span class="b-main-info_tags-list_tag">git</span>
                     </div>
                 </div>
             </div>
-
         </div>
 
         <div class="b-experience">

@@ -14,16 +14,26 @@
 }
 
 /* line 13, sass/_about.scss */
-.b-main-info, .b-experience, .b-education {
-  height: 324px;
+.b-main-info, .b-experience, .b-education, .b-works {
   background: #eff3f7;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  padding-bottom: 26px;
 }
 
 /* line 21, sass/_about.scss */
-.b-main-info_title, .b-experience_title, .b-education_title {
+.b-main-info:after, .b-experience:after, .b-education:after, .b-works:after {
+  display: block;
+  clear: both;
+  content: ' ';
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+/* line 30, sass/_about.scss */
+.b-main-info_title, .b-experience_title, .b-education_title, .b-works_title {
   width: 320px;
   margin: 0;
   margin-bottom: 16px;
@@ -33,11 +43,11 @@
   border-bottom: 2px solid #3ba8c0;
 }
 
-/* line 31, sass/_about.scss */
+/* line 40, sass/_about.scss */
 .b-main-info_portrait {
   padding-left: 20px;
 }
-/* line 33, sass/_about.scss */
+/* line 42, sass/_about.scss */
 .b-main-info_portrait img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -48,7 +58,7 @@
   height: 190px;
 }
 
-/* line 44, sass/_about.scss */
+/* line 53, sass/_about.scss */
 .b-main-info_wrapper {
   font-family: fira_sansmedium;
   font-size: 17px;
@@ -56,34 +66,34 @@
   padding-left: 35px;
 }
 
-/* line 51, sass/_about.scss */
+/* line 60, sass/_about.scss */
 .b-main-info_info {
   padding: 0;
   margin: 0;
 }
 
-/* line 56, sass/_about.scss */
+/* line 65, sass/_about.scss */
 .b-main-info_info-item {
   margin-top: 13px;
 }
-/* line 58, sass/_about.scss */
+/* line 67, sass/_about.scss */
 .b-main-info_info-item:first-child {
   margin-top: 6px;
 }
 
-/* line 63, sass/_about.scss */
+/* line 72, sass/_about.scss */
 .b-main-info_tags {
   margin-top: 12px;
 }
 
-/* line 67, sass/_about.scss */
+/* line 76, sass/_about.scss */
 .b-main-info_tags-list {
   width: 200px;
   margin-left: 20px;
   margin-top: -3px;
 }
 
-/* line 73, sass/_about.scss */
+/* line 82, sass/_about.scss */
 .b-main-info_tags-list_tag {
   background: -moz-linear-gradient(top, #3ba8c0 0%, #3ba8c0 50%, #2e8ca2 50%, #2e8ca2 100%);
   background: -webkit-linear-gradient(top, #3ba8c0 0%, #3ba8c0 50%, #2e8ca2 50%, #2e8ca2 100%);
@@ -100,34 +110,33 @@
   line-height: 30px;
 }
 
-/* line 93, sass/_about.scss */
+/* line 102, sass/_about.scss */
 .b-experience, .b-education {
-  height: 235px;
   margin-top: 25px;
 }
 
-/* line 99, sass/_about.scss */
+/* line 107, sass/_about.scss */
 .b-experience_title, .b-education_title {
   width: 189px;
 }
 
-/* line 104, sass/_about.scss */
+/* line 112, sass/_about.scss */
 .b-experience-items, .b-education_items {
   font-family: fira_sansbook;
   display: block;
   padding-left: 65px;
 }
 
-/* line 110, sass/_about.scss */
+/* line 118, sass/_about.scss */
 .b-experience-items-item, .b-education_items-item {
   margin-top: 35px;
   height: 35px;
 }
-/* line 113, sass/_about.scss */
+/* line 121, sass/_about.scss */
 .b-experience-items-item .wrapico, .b-education_items-item .wrapico {
   width: 41px;
 }
-/* line 116, sass/_about.scss */
+/* line 124, sass/_about.scss */
 .b-experience-items-item .ico, .b-education_items-item .ico {
   margin: 0 auto;
   width: 36px;
@@ -135,12 +144,12 @@
   background: url("/css/img/bagico.png");
 }
 
-/* line 124, sass/_about.scss */
+/* line 132, sass/_about.scss */
 .b-experience-items-item-desc, .b-education_items-item-desc {
   margin-left: 26px;
   margin-top: -5px;
 }
-/* line 127, sass/_about.scss */
+/* line 135, sass/_about.scss */
 .b-experience-items-item-desc h6, .b-education_items-item-desc h6 {
   font-size: 17px;
   margin: 0;
@@ -148,25 +157,25 @@
   font-weight: normal;
   height: 20px;
 }
-/* line 134, sass/_about.scss */
+/* line 142, sass/_about.scss */
 .b-experience-items-item-desc span, .b-education_items-item-desc span {
   font-family: fira_sanslight;
   font-size: 15px;
   line-height: 15px;
 }
 
-/* line 147, sass/_about.scss */
+/* line 155, sass/_about.scss */
 .b-education_title {
   width: 194px;
 }
 
-/* line 158, sass/_about.scss */
+/* line 166, sass/_about.scss */
 .b-education_items-item .ico {
   width: 41px;
   height: 23px;
   background: url("/css/img/educico.png");
 }
-/* line 163, sass/_about.scss */
+/* line 171, sass/_about.scss */
 .b-education_items-item .ico2 {
   margin: 0 auto;
   width: 26px;
@@ -174,54 +183,331 @@
   background: url("/css/img/kursico.png");
 }
 
-/* line 13, sass/style.scss */
+/* line 1, sass/_works.scss */
+.b-works {
+  padding: 0 0 26px 0;
+}
+
+/* line 6, sass/_works.scss */
+.items-grid {
+  float: left;
+  padding: 0 2.31% 0 2.31%;
+}
+
+/* line 11, sass/_works.scss */
+.row {
+  margin-top: 25px;
+}
+
+/* line 15, sass/_works.scss */
+.row::after {
+  display: block;
+  content: ' ';
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+
+/* line 24, sass/_works.scss */
+.items-grid.col-1 {
+  width: 33.33%;
+}
+
+/* line 24, sass/_works.scss */
+.items-grid.col-2 {
+  width: 66.66%;
+}
+
+/* line 24, sass/_works.scss */
+.items-grid.col-3 {
+  width: 99.99%;
+}
+
+/* line 29, sass/_works.scss */
+.b-works_title {
+  width: 182px;
+}
+
+/* line 34, sass/_works.scss */
+.b-works_items {
+  padding: 0 5px 0 5px;
+}
+
+/* line 38, sass/_works.scss */
+.b-works_items-item {
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: fira_sanslight;
+}
+/* line 39, sass/_works.scss */
+.b-works_items-item img {
+  display: block;
+  border: 3px solid #3ba8c0;
+  width: 181px;
+  height: 127px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+/* line 55, sass/_works.scss */
+.b-works_items-item_url {
+  margin-top: 12px;
+  display: block;
+  text-decoration: none;
+  font-size: 13px;
+  color: #3ba8c0;
+}
+
+/* line 63, sass/_works.scss */
+.b-works_items-item_desc {
+  height: 33px;
+  font-size: 15px;
+  color: #4a545d;
+  overflow: hidden;
+  line-height: 15px;
+}
+
+/* line 72, sass/_works.scss */
+.b-works_items-item_add a {
+  display: block;
+  width: 186px;
+  height: 134px;
+  background: url("/css/img/workico.png") no-repeat;
+  background-position: center 34px;
+  text-align: center;
+  font-family: fira_sanslight;
+  font-size: 13px;
+  border: 1px dashed #3ba8c0;
+  color: #3ba8c0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  padding-top: 76px;
+}
+
+/* line 96, sass/_works.scss */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(88, 105, 122, 0.75);
+  z-index: 10000;
+  display: none;
+}
+
+/* line 107, sass/_works.scss */
+.vertical-align {
+  width: 362px;
+  margin: 0 auto;
+}
+
+/* line 112, sass/_works.scss */
+.b-form-modal {
+  width: 362px;
+  height: 483px;
+  -webkit-border-radius: 4px/7px;
+  -moz-border-radius: 4px/7px;
+  border-radius: 4px/7px;
+  background-color: #eff3f7;
+  -webkit-box-shadow: 0 6px 12px 1px rgba(13, 16, 7, 0.35);
+  -moz-box-shadow: 0 6px 12px 1px rgba(13, 16, 7, 0.35);
+  box-shadow: 0 6px 12px 1px rgba(13, 16, 7, 0.35);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+/* line 122, sass/_works.scss */
+.b-form-modal label {
+  padding-left: 21px;
+  display: block;
+  font-family: fira_sansbook;
+  font-size: 17px;
+  color: #959aa8;
+}
+
+/* line 137, sass/_works.scss */
+.modal:target {
+  display: block;
+}
+
+/* line 141, sass/_works.scss */
+.b-form-modal_btn-close {
+  display: block;
+  height: 25px;
+  width: 25px;
+  background: url("/css/img/closeico.png");
+  position: absolute;
+  right: 12px;
+  top: 10px;
+}
+
+/* line 151, sass/_works.scss */
+.b-form-modal_title {
+  font-family: fira_sansregular;
+  font-size: 25px;
+  color: white;
+  padding: 6px 0 7px 12px;
+  height: 31px;
+  background: #48cbe8;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 163, sass/_works.scss */
+.b-form-modal_title-underline {
+  height: 9px;
+  background: #67dffa;
+}
+
+/* line 168, sass/_works.scss */
+.b-form-modal_inputs-input-group {
+  margin-top: 8px;
+}
+
+/* line 174, sass/_works.scss */
+.b-form-modal_inputs-edit {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 37px;
+  line-height: 39px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #48cbe8;
+  color: #48cbe8;
+  font-family: fira_sanslight;
+  font-size: 13px;
+  padding-left: 9px;
+  padding-right: 9px;
+}
+
+/* line 191, sass/_works.scss */
+.b-form-modal_inputs-ta {
+  margin: 0 auto;
+  display: block;
+  width: 300px;
+  height: 91px;
+  border: 1px solid #48cbe8;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #48cbe8;
+  font-family: fira_sanslight;
+  font-size: 13px;
+  padding: 13px 9px 5px 9px;
+}
+
+/* line 207, sass/_works.scss */
+.download {
+  margin: 0 auto;
+  width: 320px;
+  height: 41px;
+}
+/* line 211, sass/_works.scss */
+.download .b-form-modal_inputs-edit {
+  float: left;
+  width: 249px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+}
+/* line 220, sass/_works.scss */
+.download .btn-download {
+  height: 41px;
+  width: 52px;
+  border: none;
+  background: url("/css/img/downloadico.png");
+  float: left;
+}
+
+/* line 229, sass/_works.scss */
+.b-form-modal_btn-submit {
+  box-sizing: border-box;
+  width: 139px;
+  height: 31px;
+  padding-top: 3px;
+  background: #48cbe8;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 4px 0 0 #3ba8c0;
+  color: white;
+  font-family: fira_sansbook;
+  font-size: 19px;
+  margin: 10px auto 0;
+  display: block;
+}
+
+/* line 247, sass/_works.scss */
+.b-form-modal_btn-submit:hover {
+  height: 35px;
+  box-shadow: none;
+}
+
+/* line 14, sass/style.scss */
 ul {
   list-style: none;
 }
 
-/* line 17, sass/style.scss */
+/* line 18, sass/style.scss */
 .wrapper {
   font-size: 100%;
   background: url(/css/img/comppattern2.png);
 }
 
-/* line 22, sass/style.scss */
+/* line 23, sass/style.scss */
 h1 {
   font-family: fira_sansbook;
   font-size: 27px;
 }
 
-/* line 27, sass/style.scss */
+/* line 28, sass/style.scss */
 .clearfix {
   clear: both;
 }
 
-/* line 31, sass/style.scss */
+/* line 32, sass/style.scss */
 .left {
   float: left;
 }
 
-/* line 35, sass/style.scss */
+/* line 36, sass/style.scss */
 .right {
   float: left;
 }
 
-/* line 39, sass/style.scss */
+/* line 40, sass/style.scss */
 .b-head_socials {
   margin-right: 7.14%;
 }
-/* line 40, sass/style.scss */
+/* line 41, sass/style.scss */
 .b-head_socials li {
   display: inline-block;
 }
 
-/* line 48, sass/style.scss */
+/* line 49, sass/style.scss */
 .b-head {
   background: #eff3f7;
   height: 116px;
 }
 
-/* line 53, sass/style.scss */
+/* line 54, sass/style.scss */
 .b-head_logo {
   height: 116px;
   font-family: helveticaneue_bold;
@@ -232,13 +518,13 @@ h1 {
   margin-left: 7.14%;
 }
 
-/* line 63, sass/style.scss */
+/* line 64, sass/style.scss */
 .b-head_logo-element1 {
   margin-top: 23px;
   border-bottom: #6f727e solid 1px;
 }
 
-/* line 68, sass/style.scss */
+/* line 69, sass/style.scss */
 .b-head_logo-element2 {
   font-size: 14px;
   font-family: helveticaneue_thin;
@@ -246,14 +532,14 @@ h1 {
   margin-left: 1px;
 }
 
-/* line 75, sass/style.scss */
+/* line 76, sass/style.scss */
 .b-head_socials {
   float: right;
   display: block;
   margin-top: 35px;
 }
 
-/* line 96, sass/style.scss */
+/* line 97, sass/style.scss */
 .b-head_socials-vk {
   display: block;
   float: left;
@@ -262,17 +548,17 @@ h1 {
   margin-left: 24px;
   background: url("/css/img/vk.png");
 }
-/* line 87, sass/style.scss */
+/* line 88, sass/style.scss */
 .b-head_socials-vk:hover {
   background-position: -46px;
   cursor: pointer;
 }
-/* line 91, sass/style.scss */
+/* line 92, sass/style.scss */
 .b-head_socials-vk:first-child {
   margin-left: 0;
 }
 
-/* line 101, sass/style.scss */
+/* line 102, sass/style.scss */
 .b-head_socials-twitter {
   display: block;
   float: left;
@@ -281,17 +567,17 @@ h1 {
   margin-left: 24px;
   background: url("/css/img/twitter.png");
 }
-/* line 87, sass/style.scss */
+/* line 88, sass/style.scss */
 .b-head_socials-twitter:hover {
   background-position: -46px;
   cursor: pointer;
 }
-/* line 91, sass/style.scss */
+/* line 92, sass/style.scss */
 .b-head_socials-twitter:first-child {
   margin-left: 0;
 }
 
-/* line 106, sass/style.scss */
+/* line 107, sass/style.scss */
 .b-head_socials-facebook {
   display: block;
   float: left;
@@ -300,17 +586,17 @@ h1 {
   margin-left: 24px;
   background: url("/css/img/facebook.png");
 }
-/* line 87, sass/style.scss */
+/* line 88, sass/style.scss */
 .b-head_socials-facebook:hover {
   background-position: -46px;
   cursor: pointer;
 }
-/* line 91, sass/style.scss */
+/* line 92, sass/style.scss */
 .b-head_socials-facebook:first-child {
   margin-left: 0;
 }
 
-/* line 111, sass/style.scss */
+/* line 112, sass/style.scss */
 .b-head_socials-github {
   display: block;
   float: left;
@@ -319,17 +605,17 @@ h1 {
   margin-left: 24px;
   background: url("/css/img/github.png");
 }
-/* line 87, sass/style.scss */
+/* line 88, sass/style.scss */
 .b-head_socials-github:hover {
   background-position: -46px;
   cursor: pointer;
 }
-/* line 91, sass/style.scss */
+/* line 92, sass/style.scss */
 .b-head_socials-github:first-child {
   margin-left: 0;
 }
 
-/* line 116, sass/style.scss */
+/* line 117, sass/style.scss */
 .split-line {
   width: 100%;
   height: 3px;
@@ -337,7 +623,7 @@ h1 {
   background-size: 100%;
 }
 
-/* line 124, sass/style.scss */
+/* line 125, sass/style.scss */
 .container {
   width: 960px;
   margin: 0 auto;
@@ -345,41 +631,40 @@ h1 {
   overflow: hidden;
 }
 
-/* line 134, sass/style.scss */
+/* line 135, sass/style.scss */
 .b-nav {
   font-family: fira_sansbook;
   width: 250px;
 }
-/* line 137, sass/style.scss */
+/* line 138, sass/style.scss */
 .b-nav ul {
   margin: 0;
 }
-/* line 140, sass/style.scss */
+/* line 141, sass/style.scss */
 .b-nav a {
   text-decoration: none;
 }
 
-/* line 145, sass/style.scss */
+/* line 146, sass/style.scss */
 .b-menu {
   width: 100%;
-  height: 219px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
   background-color: #eff3f7;
 }
 
-/* line 154, sass/style.scss */
+/* line 156, sass/style.scss */
 .b-menu_items {
   padding: 0;
 }
 
-/* line 158, sass/style.scss */
+/* line 160, sass/style.scss */
 .b-menu_items-item {
   font-size: 21px;
   color: #fff;
 }
-/* line 162, sass/style.scss */
+/* line 164, sass/style.scss */
 .b-menu_items-item a {
   display: block;
   color: #959aa8;
@@ -387,54 +672,67 @@ h1 {
   width: 202px;
   padding-left: 18px;
   margin: 0 auto;
-}
-/* line 171, sass/style.scss */
-.b-menu_items-item a:hover {
-  color: #3ba8c0;
   border-bottom: 2px solid #3ba8c0;
   height: 71px;
 }
-/* line 177, sass/style.scss */
+/* line 175, sass/style.scss */
+.b-menu_items-item a:hover {
+  color: #3ba8c0;
+}
+/* line 179, sass/style.scss */
+.b-menu_items-item:last-child a {
+  height: 73px;
+  border-bottom: none;
+}
+/* line 184, sass/style.scss */
 .b-menu_items-item.active {
   height: 73px;
   background-color: #3ba8c0;
 }
-/* line 180, sass/style.scss */
+/* line 187, sass/style.scss */
 .b-menu_items-item.active a {
   color: #ffffff;
 }
-/* line 185, sass/style.scss */
+/* line 192, sass/style.scss */
+.b-menu_items-item.noactive {
+  height: 73px;
+}
+/* line 194, sass/style.scss */
+.b-menu_items-item.noactive a {
+  border: none;
+}
+/* line 199, sass/style.scss */
 .b-menu_items-item:first-child.active {
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-/* line 190, sass/style.scss */
+/* line 204, sass/style.scss */
 .b-menu_items-item:last-child.active {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
 
-/* line 199, sass/style.scss */
+/* line 213, sass/style.scss */
 .b-contacts {
   padding-top: 1px;
   margin-top: 22px;
 }
 
-/* line 204, sass/style.scss */
+/* line 218, sass/style.scss */
 .b-contacts_items {
   padding: 0;
 }
 
-/* line 209, sass/style.scss */
+/* line 223, sass/style.scss */
 .ico {
   float: left;
   width: 38px;
   height: 38px;
 }
 
-/* line 215, sass/style.scss */
+/* line 229, sass/style.scss */
 .b-contacts_items-item {
   font-size: 17px;
   color: white;
@@ -443,67 +741,67 @@ h1 {
   height: 40px;
   line-height: 40px;
 }
-/* line 223, sass/style.scss */
+/* line 237, sass/style.scss */
 .b-contacts_items-item a {
   color: white;
 }
-/* line 227, sass/style.scss */
+/* line 241, sass/style.scss */
 .b-contacts_items-item a:hover {
   text-decoration: underline;
 }
-/* line 231, sass/style.scss */
+/* line 245, sass/style.scss */
 .b-contacts_items-item:first-child {
   font-size: 21px;
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-/* line 237, sass/style.scss */
+/* line 251, sass/style.scss */
 .b-contacts_items-item:nth-child(2) {
   background: #41b9d4;
 }
-/* line 238, sass/style.scss */
+/* line 252, sass/style.scss */
 .b-contacts_items-item:nth-child(2) .ico {
   background: url("/css/img/emailico.png");
 }
-/* line 243, sass/style.scss */
+/* line 257, sass/style.scss */
 .b-contacts_items-item:nth-child(3) {
   background: #48cbe8;
 }
-/* line 244, sass/style.scss */
+/* line 258, sass/style.scss */
 .b-contacts_items-item:nth-child(3) .ico {
   background: url("/css/img/phoneico.png");
 }
-/* line 249, sass/style.scss */
+/* line 263, sass/style.scss */
 .b-contacts_items-item:last-child {
   background: #51daf8;
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-/* line 250, sass/style.scss */
+/* line 264, sass/style.scss */
 .b-contacts_items-item:last-child .ico {
   background: url("/css/img/skypeico.png");
 }
 
-/* line 262, sass/style.scss */
+/* line 276, sass/style.scss */
 .b-content {
   margin-left: 6.25%;
   width: 650px;
 }
 
-/* line 269, sass/style.scss */
+/* line 283, sass/style.scss */
 .b-footer {
   margin-top: 39px;
 }
 
-/* line 273, sass/style.scss */
+/* line 287, sass/style.scss */
 .b-footer_body {
   padding-top: 1px;
   height: 78px;
   background: #eff3f7;
 }
-/* line 277, sass/style.scss */
+/* line 291, sass/style.scss */
 .b-footer_body p {
   font-family: fira_sanslight;
   font-size: 13px;

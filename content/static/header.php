@@ -7,7 +7,12 @@ if (!defined('INIT')) exit('No direct script access allowed');
     <meta charset="UTF-8">
     <title>Портфолио</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="/css/style.css"/>
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/js/app.js"></script>
 </head>
 <body>
 <div class="wrapper">
