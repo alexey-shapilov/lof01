@@ -1,14 +1,12 @@
 <?php
 if (!defined('INIT')) exit('No direct script access allowed');
 
-$inputs = array('Название проекта','Картина проекта','URL проекта');
-
 ob_start();
 ?>
     <div class="b-content left">
         <div id="modal" class="modal">
             <div class="vertical-align">
-                <form class="b-form-modal">
+                <form id="form_project" class="b-form-modal">
                     <a class="b-form-modal_btn-close" href="#close"></a>
 
                     <div class="b-form-modal_title">Добавление проекта</div>
@@ -16,24 +14,26 @@ ob_start();
                     <div class="b-form-modal_inputs">
                         <div class="b-form-modal_inputs-input-group">
                             <label for="">Название проекта</label>
-                            <input class="b-form-modal_inputs-edit" type="text"/>
+                            <input id="name_project" class="b-form-modal_inputs-edit" type="text"/>
                         </div>
                         <div class="b-form-modal_inputs-input-group">
                             <label for="">Картинка проекта</label>
-                            <div class="download">
-                                <input class="b-form-modal_inputs-edit" type="text"/><button class="btn-download"></button>
+                            <div class="upload">
+                                <input id="file_project" class="b-form-modal_inputs-upload" type="file"/>
+                                <span id="file_name" class="b-form-modal_fn-upload"></span>
+                                <span class="btn-upload"></span>
                             </div>
                         </div>
                         <div class="b-form-modal_inputs-input-group">
                             <label for="">URL проекта</label>
-                            <input class="b-form-modal_inputs-edit" type="text"/>
+                            <input id="url_project" class="b-form-modal_inputs-edit" type="text"/>
                         </div>
                         <div class="b-form-modal_inputs-input-group">
                             <label for="">Описание</label>
-                            <textarea class="b-form-modal_inputs-ta" name="" id="" cols="30" rows="10"></textarea>
+                            <textarea id="description_project" class="b-form-modal_inputs-ta" name="" id="" cols="30" rows="10"></textarea>
                         </div>
                     </div>
-                    <button class="b-form-modal_btn-submit" type="submit">Добавить</button>
+                    <button id="submit_add_project" class="b-form-modal_btn-submit" type="submit">Добавить</button>
                 </form>
             </div>
         </div>
@@ -78,7 +78,6 @@ ob_start();
                 </div>
             </div>
         </div>
-
     </div>
 <?php
 $content = ob_get_contents();

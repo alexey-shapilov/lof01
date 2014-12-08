@@ -7,7 +7,7 @@ $active_menu = $query[0];
         <ul class="b-menu_items">
             <li class="b-menu_items-item<?=($active_menu=='about'?' active':'')?>"><a href="/about">Обо мне</a></li>
             <li class="b-menu_items-item<?=($active_menu=='works'?' active':'')?>"><a href="/works">Мои работы</a></li>
-            <li class="b-menu_items-item<?=($active_menu=='contacts'?' active':'')?>"><a href="/contacts">Связаться со мной</a></li>
+            <li class="b-menu_items-item<?=($active_menu=='feedback'?' active':'')?>"><a href="/feedback">Связаться со мной</a></li>
         </ul>
     </div>
 

@@ -2,40 +2,10 @@
 @import '/css/font/Proxima-Nova/proxima.css';
 @import '/css/font/HelveticaNeue/helveticaneue.css';
 @import "/css/normolize.css";
+@import "common";
 @import "about";
 @import "works";
-
-//$grid-clearfix-class: false;
-//$grid-gutter-width: 20px;
-//@import "grid";
-
-$block_bg_color: #eff3f7;
-
-ul {
-  list-style: none;
-}
-
-.wrapper {
-  font-size: 100%;
-  background: url(/css/img/comppattern2.png);
-}
-
-h1 {
-  font-family: fira_sansbook;
-  font-size: 27px;
-}
-
-.clearfix {
-  clear: both;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: left;
-}
+@import "feedback";
 
 .b-head_socials {
   li {
