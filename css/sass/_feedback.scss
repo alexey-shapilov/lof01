@@ -1,5 +1,9 @@
 .b-feedback {
   @include block;
+  .error_msg {
+    width: 402px;
+    @include error_msg;
+  }
 }
 
 .b-feedback_title {
@@ -13,9 +17,7 @@
   width: 100%;
   height: 74px;
   padding-top: 47px;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
+  @include border-radius(4px 4px 0 0);
   text-align: center;
   vertical-align: middle;
   margin: 0;
@@ -69,6 +71,7 @@
     display: block;
     width: 189px;
     height: 77px;
+    @include border-radius(4px);
   }
 }
 
@@ -120,5 +123,23 @@
     height: 31px;
     padding-top: 1px;
     box-shadow: 0 -2px 0 0 #687b8f;
+  }
+}
+
+.b-feedback {
+  position: relative;
+  .b-tooltip {
+    @include b-tooltip;
+    right: 10px;
+  }
+
+  .b-tooltip_arrow_l {
+    @include b-tooltip_arrow_left;
+  }
+  .b-tooltip_arrow_r {
+    @include b-tooltip_arrow_right;
+  }
+  .b-tooltip_text {
+    @include b-tooltip_text;
   }
 }

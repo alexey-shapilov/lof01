@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+$_SESSION['INIT'] = true;
+
 define('INIT', true);
 define('PATH_BASE', dirname(__FILE__));
 define('PATH_CONTENT', PATH_BASE . '/content');

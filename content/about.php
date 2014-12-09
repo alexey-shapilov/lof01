@@ -1,4 +1,6 @@
 <?php
+if (!defined('INIT')) exit('No direct script access allowed');
+
 ob_start();
 ?>
     <div class="b-content left">

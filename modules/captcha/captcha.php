@@ -1,6 +1,6 @@
 <?php
 /**
- * Script para la generación de CAPTCHAS
+ * Script para la generaciï¿½n de CAPTCHAS
  *
  * @author  Jose Rodriguez <jose.rodriguez@exec.cl>
  * @license GPLv3
@@ -10,14 +10,10 @@
  *
  */
 
-
 session_start();
 
 
-
 $captcha = new SimpleCaptcha();
-
-
 
 // OPTIONAL Change configuration...
 //$captcha->wordsFile = 'words/es.php';
@@ -38,38 +34,8 @@ if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
 }
 */
 
-
-
 // Image generation
 $captcha->CreateImage();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**
  * SimpleCaptcha class
@@ -176,23 +142,8 @@ class SimpleCaptcha {
     /** GD image */
     public $im;
 
-
-
-
-
-
-
-
-
-
     public function __construct($config = array()) {
     }
-
-
-
-
-
-
 
     public function CreateImage() {
         $ini = microtime(true);
@@ -231,14 +182,6 @@ class SimpleCaptcha {
         $this->Cleanup();
     }
 
-
-
-
-
-
-
-
-
     /**
      * Creates the image resources
      */
@@ -272,10 +215,6 @@ class SimpleCaptcha {
         }
     }
 
-
-
-
-
     /**
      * Text generation
      *
@@ -288,11 +227,6 @@ class SimpleCaptcha {
         }
         return $text;
     }
-
-
-
-
-
 
     /**
      * Random text generation
@@ -319,14 +253,6 @@ class SimpleCaptcha {
         }
         return $text;
     }
-
-
-
-
-
-
-
-
 
     /**
      * Random dictionary word generation
@@ -378,13 +304,6 @@ class SimpleCaptcha {
         return $text;
     }
 
-
-
-
-
-
-
-
     /**
      * Horizontal line insertion
      */
@@ -400,9 +319,6 @@ class SimpleCaptcha {
             imageline($this->im, $x1, $y1+$i, $x2, $y2+$i, $this->GdFgColor);
         }
     }
-
-
-
 
     /**
      * Text insertion
@@ -444,8 +360,6 @@ class SimpleCaptcha {
         $this->textFinalX = $x;
     }
 
-
-
     /**
      * Wave filter
      */
@@ -469,14 +383,11 @@ class SimpleCaptcha {
         }
     }
 
-
-
-
     /**
      * Reduce the image to the final size
      */
     protected function ReduceImage() {
-        // Reduzco el tamaño de la imagen
+        // Reduzco el tamaï¿½o de la imagen
         $imResampled = imagecreatetruecolor($this->width, $this->height);
         imagecopyresampled($imResampled, $this->im,
             0, 0, 0, 0,
@@ -486,13 +397,6 @@ class SimpleCaptcha {
         imagedestroy($this->im);
         $this->im = $imResampled;
     }
-
-
-
-
-
-
-
 
     /**
      * File generation
@@ -507,12 +411,6 @@ class SimpleCaptcha {
         }
     }
 
-
-
-
-
-
-
     /**
      * Cleanup
      */
@@ -520,20 +418,3 @@ class SimpleCaptcha {
         imagedestroy($this->im);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>

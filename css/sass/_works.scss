@@ -41,9 +41,7 @@
     border: 3px solid #3ba8c0;
     width: 181px;
     height: 127px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    @include border-radius(4px);
   }
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -80,9 +78,7 @@
     font-size: 13px;
     border: 1px dashed #3ba8c0;
     color: #3ba8c0;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
+    @include border-radius(4px);
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
@@ -93,7 +89,20 @@
 
 // Модальное окно
 
+$modal_form_err_width: 362px;
 .modal {
+  .b-tooltip {
+    @include b-tooltip;
+    right: $modal_form_err_width - 10;
+  }
+
+  .b-tooltip_arrow_r {
+    @include b-tooltip_arrow_right;
+  }
+  .b-tooltip_text {
+    @include b-tooltip_text;
+  }
+
   position: fixed;
   top: 0;
   left: 0;
@@ -104,19 +113,17 @@
   display: none;
 }
 
-
-$modal_form_width: 362px;
-.vertical-align {
-  width: $modal_form_width;
-  margin: 0 auto;
+.modal.er {
+  .vertical-align {
+    width: $modal_form_err_width;
+    margin: 0 auto;
+  }
 }
 
 .b-form-modal {
-  width: $modal_form_width;
+  width: $modal_form_err_width;
   height: 483px;
-  -webkit-border-radius: 4px/7px;
-  -moz-border-radius: 4px/7px;
-  border-radius: 4px/7px;
+  @include border-radius(4px/7px);
   background-color: #eff3f7;
   -webkit-box-shadow: 0 6px 12px 1px rgba(13, 16, 7, .35);
   -moz-box-shadow: 0 6px 12px 1px rgba(13, 16, 7, .35);
@@ -157,9 +164,7 @@ $modal_form_width: 362px;
   padding: 6px 0 7px 12px;
   height: 31px;
   background: #48cbe8;
-  -webkit-border-radius: 4px 4px 0 0;
-  -moz-border-radius: 4px 4px 0 0;
-  border-radius: 4px 4px 0 0;
+  @include border-radius(4px 4px 0 0);
 }
 
 .b-form-modal_title-underline {
@@ -200,9 +205,7 @@ $b-form-modal_input_width: 300px;
   @extend .b-form-modal_inputs-edit;
   float: left;
   width: $b-form-modal_input_width - 51;
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px;
-  border-radius: 4px 0 0 4px;
+  @include border-radius(4px 0 0 4px);
   border-right: none;
   padding-top: 1px;
   padding-bottom: 1px;
@@ -218,7 +221,7 @@ $b-form-modal_input_width: 300px;
   display: block;
 }
 
-.b-form-modal_inputs-upload{
+.b-form-modal_inputs-upload {
   cursor: pointer;
   height: 37px;
   opacity: 0;
@@ -238,44 +241,61 @@ $b-form-modal_input_width: 300px;
   &:hover {
     height: 33px;
   }
-  &:active{
+  &:active {
     height: 31px;
   }
 }
 
-$tooltip_color: #f97e76;
+.modal.sc {
+  .vertical-align {
+    width: 349px;
+    margin: 0 auto;
+    background: red;
+  }
+}
 
-.b-tooltip{
+.b-success {
+  padding: 15px;
+  background: white;
+  width: 349px;
+  height: 61px;
+  @include border-radius(4px);
+
+  margin: auto;
   position: absolute;
-  right: $modal_form_width - 10;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
-.b-tooltip_text {
-  float: left;
-  background: $tooltip_color;
-  color: white;
-  padding: 2px 15px;
+.b-success_content {
+  @include border-radius(4px);
+
+  border: 1px solid #49bb7b;
+  background: #b8e1ce;
   font-family: fira_sansbook;
-  font-size: 13px;
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-}
+  color: #49bb7b;
+  //    width: 317px;
+  //      height: 59px;
+  padding: 8px;
+  position: relative;
 
-.b-tooltip_arrow {
-  float: left;
-  margin-top: 7px;
-  .arrow1 {
-    border-bottom: 5px solid $tooltip_color;
-    border-right: 7px solid transparent;
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    line-height: 28px;
   }
-  .arrow2 {
-    border-top: 5px solid $tooltip_color;
-    border-right: 7px solid transparent;
+  p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 18px;
   }
-}
-
-.error {
-  background: #fad2d1 !important;
-  border-color: $tooltip_color !important;
+  img {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
 }

@@ -1,11 +1,13 @@
 $block_bg_color: #eff3f7;
+body {
+  height: 100%;
+}
 
 ul {
   list-style: none;
 }
 
 .wrapper {
-  font-size: 100%;
   background: url(/css/img/comppattern2.png);
 }
 
@@ -26,11 +28,64 @@ h1 {
   float: right;
 }
 
+$tooltip_color: #f97e76;
+
+.error {
+  background: #fad2d1 !important;
+  border-color: $tooltip_color !important;
+}
+
+@mixin border-radius($radius...) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin b-tooltip {
+  position: absolute;
+}
+
+@mixin b-tooltip_text {
+  float: left;
+  background: $tooltip_color;
+  color: white;
+  padding: 2px 15px;
+  font-family: fira_sansbook;
+  font-size: 13px;
+  @include border-radius(4px);
+}
+
+@mixin b-tooltip_arrow_right {
+  float: left;
+  margin-top: 7px;
+  .arrow1 {
+    border-bottom: 5px solid $tooltip_color;
+    border-right: 7px solid transparent;
+  }
+  .arrow2 {
+    border-top: 5px solid $tooltip_color;
+    border-right: 7px solid transparent;
+  }
+}
+
+@mixin b-tooltip_arrow_left {
+  float: left;
+  margin-top: 7px;
+  .arrow1 {
+    border-bottom: 5px solid $tooltip_color;
+    border-left: 7px solid transparent;
+  }
+  .arrow2 {
+    border-top: 5px solid $tooltip_color;
+    border-left: 7px solid transparent;
+  }
+}
+
 @mixin element-input {
   display: block;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  @include border-radius(4px);
   border: 1px solid #48cbe8;
   color: #48cbe8;
   font-family: fira_sanslight;
@@ -39,12 +94,10 @@ h1 {
   padding-right: 9px;
 }
 
-@mixin btn{
+@mixin btn {
   box-sizing: border-box;
   padding-top: 3px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  @include border-radius(4px);
   border: none;
   color: white;
   font-family: fira_sansbook;
@@ -67,9 +120,7 @@ h1 {
 
 @mixin block {
   background: $block_bg_color;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  @include border-radius(4px);
   padding-bottom: 26px;
   &:after {
     display: block;
@@ -78,5 +129,25 @@ h1 {
     height: 0;
     visibility: hidden;
     overflow: hidden;
+  }
+}
+
+@mixin error_msg {
+  margin: 1px auto;
+  padding: 9px;
+  border: 1px solid $tooltip_color;
+  color: $tooltip_color;
+  font-family: fira_sansbook;
+  @include border-radius(4px);
+  h1 {
+//    font-family: fira_sansbook;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+  }
+  p {
+//    font-family: fira_sansbook;
+    font-size: 15px;
+    margin: 0;
   }
 }
