@@ -2,7 +2,7 @@
 if (!defined('INIT')) exit('No direct script access allowed');
 
 session_start();
-require_once $_SERVER['DOCUMENT_ROOT'] . '/modules/includer.php';
+require_once PATH_MODULES . '/includer.php';
 
 $db = getDatabase();
 $projects = $db->all('SELECT * from projects');
@@ -12,10 +12,10 @@ $token = md5(session_id() . microtime(true));
 ob_start();
 ?>
     <div class="b-content left">
-        <div id="modal" class="modal er">
+        <div id="modal" class="modal add_project">
             <div class="vertical-align">
                 <form id="form_project" class="b-form-modal">
-                    <a class="b-form-modal_btn-close" href="#close"></a>
+                    <a class="b-form-modal_btn-close" id="close_add_project" href=""></a>
 
                     <div class="b-form-modal_title">Добавление проекта</div>
                     <div class="b-form-modal_title-underline"></div>
@@ -54,7 +54,7 @@ ob_start();
             <div class="vertical-align">
                 <div class="b-success">
                     <div class="b-success_content">
-                        <img id="close_success" src="/css/img/closesuccessico.png" alt="close"/>
+                        <img id="close_success" src="css/img/closesuccessico.png" alt="close"/>
 
                         <h1 class="success_title">Ура!</h1>
 
@@ -69,44 +69,37 @@ ob_start();
 
             <div class="b-works_items">
                 <?php
-                $k = 1;
-                $p = '';
-                $row = '<div class="row">#content#</div>';
                 $item = '';
                 foreach ($projects as $project) {
-                    if ($k + 1 % 3 == 0) {
-                        $r = str_replace('#content#', $item, $row);
-                        $p .= $r;
-                        $item = '';
-                    }
                     $img_path = explode('::', $project['file']);
                     $item .= '<div class="b-works_items-item items-grid col-1">
-                                <img src="/img/' . $img_path[0] . '/800x800/' . $img_path[1] . '.jpg" alt="' . $project['name'] . '"/>
-                                <a class="b-works_items-item_url">' . $project['url'] . '</a>
 
-                                <div class="b-works_items-item_desc">' . $project['description'] . '</div>
-                            </div>';
+                                 <div class="bl">
+                                    <div class="ch-item ch-img" style="background-image:url(img/' . $img_path[0] . '/181x127/' . $img_path[1] . '.jpg)">
+                                        <div class="ch-info">
+                                            <a href="img/' . $img_path[0] . '/800x800/' . $img_path[1] . '.jpg"><span>' . $project['name'] . '</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                 <a class="b-works_items-item_url">' . $project['url'] . '</a>
+                                 <div class="b-works_items-item_desc">' . $project['description'] . '</div>
+                             </div>';
                 }
-
-                if (true) {
-                    $add = '<div class="b-works_items-item_add items-grid col-1">
-                                <a href="#modal">
-                                    Добавить проект
-                                </a>
-                            </div>';
-                    $item .= $add;
-                    $r .= str_replace('#content#', $item, $row);
-                } else if ($item != '') {
-                    $r .= str_replace('#content#', $item, $row);
+                if ($_SESSION['user_login']) {
+                    $item .= '<div class="b-works_items-item_add items-grid col-1">
+                                 <a id="show_add_project" href="#modal">
+                                     Добавить проект
+                                 </a>
+                             </div>';
                 }
-                echo $r;
+                echo $item;
                 ?>
             </div>
         </div>
     </div>
 
     <iframe id="uploadImageFrame" name="uploadImageFrame" style="display: none"></iframe>
-    <form action="/scripts/imageUpload.php" target="uploadImageFrame" method="POST" id="uploadImageForm"
+    <form action="/imageUpload.ajax" target="uploadImageFrame" method="POST" id="uploadImageForm"
           style="display: none" enctype="multipart/form-data">
         <input type="hidden" name="token" value="<?php echo $token; ?>">
     </form>

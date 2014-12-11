@@ -15,8 +15,10 @@
   color: white;
   padding: 0;
   width: 100%;
-  height: 74px;
-  padding-top: 47px;
+//  height: 74px;
+  height: 121px;
+  line-height: 121px;
+//  padding-top: 47px;
   @include border-radius(4px 4px 0 0);
   text-align: center;
   vertical-align: middle;
@@ -37,6 +39,9 @@
     font-size: 17px;
   }
   .row {
+    margin-top: 12px;
+  }
+  .row:first-child {
     margin-top: 33px;
   }
 }
@@ -56,8 +61,8 @@
 
 .b-feedback_items-item-text {
   .b-feedback_items-item_input {
-    width: 382px;
-    height: 181px;
+    width: 383px;
+    height: 178px;
   }
 }
 
@@ -98,48 +103,25 @@
   height: 31px;
   margin: 0;
 
-  &:hover {
-    height: 35px;
-  }
-  &:active {
-    height: 31px;
-  }
 }
 
 .b-feedback_items-buttons-clear {
   @include btn;
-
-  background: #849db5;
-  box-shadow: 0 2px 0 0 #687b8f;
   margin: 0;
-
   width: 139px;
   height: 31px;
 
-  &:hover {
-    height: 33px;
-  }
+  background: #849db5;
+  border-bottom: 2px solid #687b8f;
+  border-top: 2px solid #849db5;
   &:active {
-    height: 31px;
-    padding-top: 1px;
-    box-shadow: 0 -2px 0 0 #687b8f;
+    border-top: 2px solid #687b8f !important;
+  }
+  &:hover {
+    border-color: #849db5;
   }
 }
 
 .b-feedback {
   position: relative;
-  .b-tooltip {
-    @include b-tooltip;
-    right: 10px;
-  }
-
-  .b-tooltip_arrow_l {
-    @include b-tooltip_arrow_left;
-  }
-  .b-tooltip_arrow_r {
-    @include b-tooltip_arrow_right;
-  }
-  .b-tooltip_text {
-    @include b-tooltip_text;
-  }
 }

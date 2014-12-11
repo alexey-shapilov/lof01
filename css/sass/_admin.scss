@@ -1,0 +1,75 @@
+.b-admin {
+  width: 590px;
+  height: 484px;
+  background-color: #eff3f7;
+  -webkit-box-shadow: 0 4px 7px rgba(13, 16, 7, .29);
+  -moz-box-shadow: 0 4px 7px rgba(13, 16, 7, .29);
+  box-shadow: 0 4px 7px rgba(13, 16, 7, .29);
+
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.b-admin_title {
+  display: block;
+  background: #48cbe8;
+  font-family: fira_sansbook;
+  font-weight: normal;
+  font-size: 40px;
+  color: white;
+  padding: 0;
+  width: 100%;
+  height: 92px;
+  line-height: 92px;
+  @include border-radius(4px 4px 0 0);
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.b-admin_title-underline {
+  height: 15px;
+  background: #67dffa;
+}
+
+.b-admin_items {
+  width: 424px;
+  margin: 14px auto;
+  label {
+    width: 100%;
+    display: block;
+    color: #959aa8;
+    font-family: fira_sanslight;
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+.b-admin_items-item_input {
+  @include element-input;
+  height: 58px;
+  width: 404px;
+  display: block;
+  font-size: 17px;
+}
+
+.b-admin_submit {
+  @include btn;
+  @include btn-default;
+  @include border-radius(8px);
+
+  width: 214px;
+  height: 50px;
+  margin: 34px auto;
+
+  &:hover {
+//    height: 35px;
+  }
+  &:active {
+//    height: 31px;
+  }
+}

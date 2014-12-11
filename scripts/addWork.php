@@ -1,7 +1,7 @@
 <?php
-define('INIT', true);
+if (!defined('INIT')) exit('No direct script access allowed');
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/modules/includer.php';
+require_once PATH_MODULES . '/includer.php';
 
 $errors = array();
 

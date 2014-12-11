@@ -42,7 +42,7 @@ ob_start();
                 <div class="row">
                     <div class="b-feedback_items-buttons">
                         <button type="submit" id="submit_feedback" class="b-feedback_items-buttons-submit left">Отправить</button>
-                        <button class="b-feedback_items-buttons-clear right">Очистить</button>
+                        <button id="clear_feedback" type="reset" class="b-feedback_items-buttons-clear right">Очистить</button>
                     </div>
                 </div>
             </div>

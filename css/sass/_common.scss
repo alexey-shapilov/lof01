@@ -1,5 +1,5 @@
 $block_bg_color: #eff3f7;
-body {
+html, body {
   height: 100%;
 }
 
@@ -8,7 +8,15 @@ ul {
 }
 
 .wrapper {
-  background: url(/css/img/comppattern2.png);
+  background: url(img/comppattern2.png);
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -117px;
+}
+
+.footer-push {
+  height: 117px;
 }
 
 h1 {
@@ -33,6 +41,23 @@ $tooltip_color: #f97e76;
 .error {
   background: #fad2d1 !important;
   border-color: $tooltip_color !important;
+}
+
+.b-head_socials-wrapper {
+  margin-top: 35px;
+  margin-right: 7.14%;
+}
+
+.relative {
+  position: relative;
+}
+
+.i-menu {
+  display: none;
+  background: url("img/menuico.png");
+  width: 25px;
+  height: 21px;
+  cursor: pointer;
 }
 
 @mixin border-radius($radius...) {
@@ -83,6 +108,39 @@ $tooltip_color: #f97e76;
   }
 }
 
+@mixin b-arrow_up($clr) {
+  float: left;
+  .arrow1 {
+    float: left;
+    border-bottom: 15px solid $clr;
+    border-left: 14px solid transparent;
+  }
+  .arrow2 {
+    float: left;
+    border-bottom: 15px solid $clr;
+    border-right: 14px solid transparent;
+  }
+}
+
+.b-tooltip {
+  display: inline;
+  @include b-tooltip;
+  right: 10px;
+  z-index: 20000;
+}
+
+.b-tooltip_arrow_l {
+  @include b-tooltip_arrow_left;
+}
+
+.b-tooltip_arrow_r {
+  @include b-tooltip_arrow_right;
+}
+
+.b-tooltip_text {
+  @include b-tooltip_text;
+}
+
 @mixin element-input {
   display: block;
   @include border-radius(4px);
@@ -96,7 +154,7 @@ $tooltip_color: #f97e76;
 
 @mixin btn {
   box-sizing: border-box;
-  padding-top: 3px;
+//  padding-top: 3px;
   @include border-radius(4px);
   border: none;
   color: white;
@@ -104,18 +162,20 @@ $tooltip_color: #f97e76;
   font-size: 19px;
   margin: 10px auto 0;
   display: block;
-  &:hover {
-    box-shadow: none;
-  }
 }
 
 @mixin btn-default {
   background: #48cbe8;
-  box-shadow: 0 2px 0 0 #3ba8c0;
+  //  box-shadow: 0 2px 0 0 #3ba8c0;
+  border-bottom: 2px solid #3ba8c0;
+  border-top: 2px solid #48cbe8;
   &:active {
-    padding-top: 1px;
-    box-shadow: 0 -2px 0 0 #3ba8c0;
+    border-top: 2px solid #3ba8c0 !important;
   }
+  &:hover {
+    border-color: #48cbe8;
+  }
+
 }
 
 @mixin block {
@@ -140,13 +200,13 @@ $tooltip_color: #f97e76;
   font-family: fira_sansbook;
   @include border-radius(4px);
   h1 {
-//    font-family: fira_sansbook;
+    //    font-family: fira_sansbook;
     font-size: 25px;
     padding: 0;
     margin: 0;
   }
   p {
-//    font-family: fira_sansbook;
+    //    font-family: fira_sansbook;
     font-size: 15px;
     margin: 0;
   }

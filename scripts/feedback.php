@@ -1,5 +1,5 @@
 <?php
-
+if ( ! defined('INIT')) exit('No direct script access allowed');
 session_start();
 
 $errors = array();
@@ -7,24 +7,24 @@ $errors = array();
 /** Validate captcha */
 if (!empty($_REQUEST['captcha'])) {
     if (empty($_SESSION['captcha']) || trim(strtolower($_REQUEST['captcha'])) != $_SESSION['captcha']) {
-        $errors['captcha'] = "CAPTCHA";
+        $errors['captcha'] = "неверный код с картинки";
         $errors['captcha_ses'] = $_SESSION['captcha'];
     }
     unset($_SESSION['captcha']);
 } else {
-    $errors['captcha'] = 'CAPTCHA';
+    $errors['captcha'] = 'неверный код с картинки';
 }
 
 if (empty($_REQUEST['name_feedback'])) {
-    $errors['name_feedback'] = 'Имя';
+    $errors['name_feedback'] = 'введите имя';
 }
 
 if (empty($_REQUEST['email_feedback'])) {
-    $errors['email_feedback'] = 'Email';
+    $errors['email_feedback'] = 'введите email';
 }
 
 if (empty($_REQUEST['msg_feedback'])) {
-    $errors['msg_feedback'] = 'Сообщение';
+    $errors['msg_feedback'] = 'введите сообщение';
 }
 
 if (!count($errors)) {

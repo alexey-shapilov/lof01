@@ -1,4 +1,5 @@
 <?php
+if ( ! defined('INIT')) exit('No direct script access allowed');
 require_once $_SERVER['DOCUMENT_ROOT'] . '/modules/upload/class.upload.php';
 
 function jsOnResponse($obj)
@@ -29,7 +30,6 @@ if (isset($_FILES['file_project']['tmp_name']) && isset($_POST['token']) && $_PO
 
     if (!$errors) {
         $handle = new upload($_FILES['file_project']['tmp_name']);
-        echo $handle->log;
         if (!$handle->uploaded)
             $errors .= ("Выберите фотографию для загрузки");
         if ($handle->file_src_size > (3 * 1024 * 1024))
@@ -47,23 +47,22 @@ if (isset($_FILES['file_project']['tmp_name']) && isset($_POST['token']) && $_PO
             $handle->file_new_name_ext = 'jpg';
             $handle->process($config->tmpUploadsImageFolder . $token . '/800x800/');
             if ($handle->processed) {
-                $success = 1;
-                $rel = $token . "::" . $filename;
+                $handle->clean();
             } else $errors .= $handle->error;
 
-//            $handle = new upload($config->tmpUploadsImageFolder . $token . '/800x800/' . $filename . '.jpg');
-//            $handle->file_new_name_body = $filename;
-//            $handle->image_resize = true;
-//            $handle->image_ratio_crop = true;
-//            $handle->image_y = 120;
-//            $handle->image_x = 120;
-//            $handle->file_new_name_ext = 'jpg';
-//            $handle->process($config->tmpUploadsImageFolder . $token . '/120x120/');
-//            if ($handle->processed) {
-//                $success = 1;
+            $handle = new upload($config->tmpUploadsImageFolder . $token . '/800x800/' . $filename . '.jpg');
+            $handle->file_new_name_body = $filename;
+            $handle->image_resize = true;
+            $handle->image_ratio_fill = true;
+            $handle->image_x = 181;
+            $handle->image_y = 127;
+            $handle->file_new_name_ext = 'jpg';
+            $handle->process($config->tmpUploadsImageFolder . $token . '/181x127/');
+            if ($handle->processed) {
+                $success = 1;
 //                $thumbnail = $config->tmpHTTPUploadsImageFolder . $token . "/120x120/" . $filename . '.jpg';
-//                $rel = $token . "::" . $filename;
-//            } else $errors .= $handle->error;
+                $rel = $token . "::" . $filename;
+            } else $errors .= $handle->error;
         }
     }
 }

@@ -1,11 +1,10 @@
 .b-works {
   @include block;
-  padding: 0 0 26px 0;
+  padding: 0;
 }
 
 .items-grid {
   float: left;
-  padding: 0 2.31% 0 2.31%;
 }
 
 .row {
@@ -22,13 +21,15 @@
 
 @for $i from 1 through 3 {
   .items-grid.col-#{$i} {
-    width: 33.33% * $i;
+    width: 28.67% * $i;
+    margin: 0 2.33% 54px 2.33%;
   }
 }
 
 .b-works_title {
   @extend .b-main-info_title;
   width: 182px;
+  margin-bottom: 34px;
 }
 
 .b-works_items {
@@ -51,7 +52,7 @@
 }
 
 .b-works_items-item_url {
-  margin-top: 12px;
+//  margin-top: 12px;
   display: block;
   text-decoration: none;
   font-size: 13px;
@@ -71,7 +72,7 @@
     display: block;
     width: 186px;
     height: 134px;
-    background: url("/css/img/workico.png") no-repeat;
+    background: url("img/workico.png") no-repeat;
     background-position: center 34px;
     text-align: center;
     font-family: fira_sanslight;
@@ -91,18 +92,6 @@
 
 $modal_form_err_width: 362px;
 .modal {
-  .b-tooltip {
-    @include b-tooltip;
-    right: $modal_form_err_width - 10;
-  }
-
-  .b-tooltip_arrow_r {
-    @include b-tooltip_arrow_right;
-  }
-  .b-tooltip_text {
-    @include b-tooltip_text;
-  }
-
   position: fixed;
   top: 0;
   left: 0;
@@ -113,7 +102,7 @@ $modal_form_err_width: 362px;
   display: none;
 }
 
-.modal.er {
+.modal.add_project {
   .vertical-align {
     width: $modal_form_err_width;
     margin: 0 auto;
@@ -151,7 +140,7 @@ $modal_form_err_width: 362px;
   display: block;
   height: 25px;
   width: 25px;
-  background: url('/css/img/closeico.png');
+  background: url('img/closeico.png');
   position: absolute;
   right: 12px;
   top: 10px;
@@ -216,7 +205,7 @@ $b-form-modal_input_width: 300px;
   height: 41px;
   width: 52px;
   border: none;
-  background: url("/css/img/downloadico.png");
+  background: url("img/downloadico.png");
   float: left;
   display: block;
 }
@@ -236,14 +225,7 @@ $b-form-modal_input_width: 300px;
   @include btn-default;
 
   width: 139px;
-  height: 31px;
-
-  &:hover {
-    height: 33px;
-  }
-  &:active {
-    height: 31px;
-  }
+  height: 33px;
 }
 
 .modal.sc {

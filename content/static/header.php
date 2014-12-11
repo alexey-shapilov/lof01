@@ -9,27 +9,34 @@ if (!defined('INIT')) exit('No direct script access allowed');
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="icon" type="image/png" href="/favicon.png" />
 
-    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/fancybox/jquery.fancybox.css"/>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/css/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/js/app.js"></script>
 </head>
 <body>
 <div class="wrapper">
     <div class="b-head">
-        <div>
+        <div id="header-block">
             <div class="b-head_logo">
                 <div class="vert-center">
                     <div class="b-head_logo-element1">LOFTSCHOOL</div>
                     <div class="b-head_logo-element2">комплексное обучение web разработке</div>
                 </div>
             </div>
-            <div class="b-head_socials">
-                <a href="http://vk.com" class="b-head_socials-vk"></a>
+        </div>
+        <div class="b-head_socials-wrapper right">
+            <div class="b-head_socials left">
+                <a href="https://vk.com/alexey.shapilov" class="b-head_socials-vk"></a>
                 <a href="" class="b-head_socials-twitter"> </a>
                 <a href="" class="b-head_socials-facebook"> </a>
                 <a href="" class="b-head_socials-github"> </a>
             </div>
+            <i id='i-menu' class="i-menu left"></i>
         </div>
         <div class="split-line clearfix"></div>
     </div>
