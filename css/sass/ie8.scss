@@ -1,0 +1,65 @@
+.modal {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000, endColorstr=#c8000000);
+}
+
+.upload input[type=file] {
+  opacity: 0;
+  filter: alpha(opacity=0);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 35px;
+  font-size: 600px;
+
+  z-index: 2;
+  cursor: pointer;
+}
+
+.b-form-modal_fn-upload {
+  width: 247px;
+}
+
+.b-contacts_items-item {
+  &:first-child + * {
+    .ico {
+      background: url('img/emailico.png');
+    }
+    background: #41b9d4;
+  }
+  &:first-child + * + *  {
+    .ico {
+      background: url('img/phoneico.png');
+    }
+    background: #48cbe8;
+  }
+  &:first-child + * + * + * {
+    .ico {
+      background: url('img/skypeico.png');
+    }
+    background: #51daf8;
+  }
+}
+
+.ch-item:hover .ch-info {
+  display: block;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#96000000, endColorstr=#96000000);
+}
+
+
+.ch-info {
+  display: none;
+}
+
+.b-main-info_tags-list_tag {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff3ba8c0, endColorstr=#ff2e8ca2);
+  display: inline-block;
+  overflow:auto;
+  padding: 0 9px 0 9px;
+  line-height: 25px;
+}
+
+.b-feedback_items-buttons-submit, .b-feedback_items-buttons-clear {
+  margin-top: 18px;
+}

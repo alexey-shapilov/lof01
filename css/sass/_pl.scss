@@ -34,8 +34,9 @@
     float: none;
   }
 
-  .b-contacts {
-    margin: 0 0 31px 0;
+  .b-mob_contacts {
+    display: block;
+    margin: 28px 0 31px 0;
     height: 46px;
   }
 
@@ -49,23 +50,28 @@
     width: 33.33%;
     padding: 3px 0;
 
-    .b1 {
-      position: relative;
-      float: right;
-      right: 50%;
-    }
-
-    .b2 {
-      position: relative;
-      right: -50%;
-    }
     a {
       text-decoration: none;
     }
     &:first-child {
-      display: none;
+      font-size: inherit;
+      .ico {
+        background: url('img/emailico.png');
+      }
+      background: #41b9d4;
+      @include border-radius(0);
+    }
+    &:nth-child(2) {
+      .ico {
+        background: url('img/phoneico.png');
+      }
+      background: #48cbe8;
     }
     &:last-child {
+      .ico {
+        background: url('img/skypeico.png');
+      }
+      background: #51daf8;
       @include border-radius(0);
     }
   }
@@ -76,9 +82,6 @@
 
   .b-footer {
     margin-top: 28px;
-    .b-contacts {
-      display: block;
-    }
   }
 
   .b-footer_body {
@@ -97,5 +100,48 @@
     display: block;
     margin-left: 58px;
     margin-top: 12px;
+  }
+
+  .b-works_items {
+    margin: 0 auto;
+  }
+  .items-grid.col-1 {
+    width: 42.28%;
+    margin: 0 3.86% 54px 3.86%;
+  }
+
+  .b1 {
+    position: relative;
+    float: right;
+    right: 50%;
+  }
+
+  .b2 {
+    position: relative;
+    right: -50%;
+  }
+
+  .bl {
+    width: 229px; //220px;
+    height: 163px; //220px;
+    display: inline-block;
+  }
+
+  .b-works_items-item_add {
+    text-align: center;
+    a {
+      background-position: center 55px;
+      display: inline-block;
+      width: 229px;
+      height: 163px;
+      padding-top: 96px;
+    }
+  }
+
+  .wrapper {
+    margin: 0 auto -56px;
+  }
+  .footer-push {
+    height: 2px;
   }
 }

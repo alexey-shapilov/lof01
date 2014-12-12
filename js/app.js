@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.active').prev().toggleClass('noactive');
+    $('.active').next().toggleClass('noactive');
 
     if ($.fancybox) $(".ch-info a").fancybox();
 
@@ -11,6 +11,12 @@ $(document).ready(function () {
             nav.hide();
         }
     });
+    //
+    //if (file_name.text() == 'Загрузите изображение') {
+    //    if (file_name.hasClass('placeholder')) {
+    //        file_name.toggleClass('placeholder')
+    //    }
+    //}
 
     $('#submit_add_project').on('click', function (event) {
         var name_project = $('#name_project'),
@@ -26,7 +32,7 @@ $(document).ready(function () {
             addToolTip(name_project, 'right', parent, 'введите название', {dy: 8});
             err = true;
         }
-        if (file_name.text() == '') {
+        if (file_name.text() == '' || file_name.text() == 'Загрузите изображение') {
             addToolTip(file_name, 'right', parent, 'укажите изображение', {dy: 8});
             err = true;
         }
@@ -185,6 +191,8 @@ $(document).ready(function () {
             e.preventDefault();
         }
     })
+
+    $('input, textarea').placeholder();
 });
 
 function onResponse(d) {

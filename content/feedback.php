@@ -14,32 +14,32 @@ ob_start();
                 <div class="row">
                     <div class="b-feedback_items-item left">
                         <label for="">Имя</label>
-                        <input id="name_feedback" name="name_feedback" class="b-feedback_items-item_input" type="text"/>
+                        <input id="name_feedback" name="name_feedback" class="b-feedback_items-item_input" type="text" placeholder="Как к Вам обращаться"/>
                     </div>
                     <div class="b-feedback_items-item left">
                         <label for="">Email</label>
-                        <input id="email_feedback" name="email_feedback" class="b-feedback_items-item_input" type="text"/>
+                        <input id="email_feedback" name="email_feedback" class="b-feedback_items-item_input" type="text" placeholder="Куда мне писать"/>
                     </div>
                 </div>
                 <div class="row">
                     <div class="b-feedback_items-item-text">
                         <label for="">Сообщение</label>
-                        <textarea id="msg_feedback" name="msg_feedback" class="b-feedback_items-item_input"></textarea>
+                        <textarea id="msg_feedback" name="msg_feedback" class="b-feedback_items-item_input" placeholder="Кратко в чем суть"></textarea>
                     </div>
                 </div>
                 <div class="row">
                     <label>Введите код указанный на картинке</label>
 
-                    <div>
+                    <div class="b-captcha">
                         <div class="b-feedback_items-item captcha left">
                             <img src="/modules/captcha/captcha.php" alt=""/>
                         </div>
                         <div class="b-feedback_items-item confirm left">
-                            <input id="captcha" name="captcha" class="b-feedback_items-item_input left" type="text"/>
+                            <input id="captcha" name="captcha" class="b-feedback_items-item_input left" type="text" placeholder="Введите код"/>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row clearfix">
                     <div class="b-feedback_items-buttons">
                         <button type="submit" id="submit_feedback" class="b-feedback_items-buttons-submit left">Отправить</button>
                         <button id="clear_feedback" type="reset" class="b-feedback_items-buttons-clear right">Очистить</button>

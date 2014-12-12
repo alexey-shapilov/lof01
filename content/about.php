@@ -29,11 +29,11 @@ ob_start();
                     <div class="f-bold left">Ключевые навыки:</div>
 
                     <div class="b-main-info_tags-list left">
-                        <span class="b-main-info_tags-list_tag">html</span>&nbsp;
-                        <span class="b-main-info_tags-list_tag">css</span>&nbsp;
-                        <span class="b-main-info_tags-list_tag">javascript</span>&nbsp;
-                        <span class="b-main-info_tags-list_tag">PHP</span>&nbsp;
-                        <span class="b-main-info_tags-list_tag">Java</span>&nbsp;
+                        <span class="b-main-info_tags-list_tag">html</span>
+                        <span class="b-main-info_tags-list_tag">css</span>
+                        <span class="b-main-info_tags-list_tag">javascript</span>
+                        <span class="b-main-info_tags-list_tag">PHP</span>
+                        <span class="b-main-info_tags-list_tag">Java</span>
                         <span class="b-main-info_tags-list_tag">git</span>
                     </div>
                 </div>

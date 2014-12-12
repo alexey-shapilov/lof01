@@ -22,27 +22,31 @@ ob_start();
                     <div class="b-form-modal_inputs">
                         <div class="b-form-modal_inputs-input-group">
                             <label for="name_project">Название проекта</label>
-                            <input id="name_project" name="name_project" class="b-form-modal_inputs-edit" type="text"/>
+                            <input id="name_project" name="name_project" class="b-form-modal_inputs-edit" type="text"
+                                   placeholder="Введите название"/>
                         </div>
                         <div class="b-form-modal_inputs-input-group">
                             <label for="file_project">Картинка проекта</label>
 
                             <div class="upload">
                                 <input id="file_project" name="file_project" class="b-form-modal_inputs-upload"
-                                       type="file"/>
-                                <span id="file_name" class="b-form-modal_fn-upload"></span>
-                                <span class="btn-upload"></span>
+                                       type="file" placeholder=""/>
+
+                                <div>
+                                    <span id="file_name" class="b-form-modal_fn-upload">Загрузите изображение</span>
+                                    <button class="btn-upload"></button>
+                                </div>
                             </div>
                         </div>
                         <div class="b-form-modal_inputs-input-group">
                             <label for="url_project">URL проекта</label>
-                            <input id="url_project" name="url_project" class="b-form-modal_inputs-edit" type="text"/>
+                            <input id="url_project" name="url_project" class="b-form-modal_inputs-edit" type="text"
+                                   placeholder="Добавьте ссылку"/>
                         </div>
                         <div class="b-form-modal_inputs-input-group">
                             <label for="description_project">Описание</label>
                             <textarea id="description_project" class="b-form-modal_inputs-ta" name="description_project"
-                                      id="" cols="30"
-                                      rows="10"></textarea>
+                                      placeholder="Пара слов о Вашем проекте"></textarea>
                         </div>
                     </div>
                     <button id="submit_add_project" class="b-form-modal_btn-submit">Добавить</button>
@@ -68,32 +72,38 @@ ob_start();
             <h1 class="b-works_title">Мои работы</h1>
 
             <div class="b-works_items">
-                <?php
-                $item = '';
-                foreach ($projects as $project) {
-                    $img_path = explode('::', $project['file']);
-                    $item .= '<div class="b-works_items-item items-grid col-1">
-
-                                 <div class="bl">
-                                    <div class="ch-item ch-img" style="background-image:url(img/' . $img_path[0] . '/181x127/' . $img_path[1] . '.jpg)">
-                                        <div class="ch-info">
-                                            <a href="img/' . $img_path[0] . '/800x800/' . $img_path[1] . '.jpg"><span>' . $project['name'] . '</span></a>
+                <div class="b1">
+                    <div class="b2">
+                        <?php
+                        $item = '';
+                        foreach ($projects as $project) {
+                            $img_path = explode('::', $project['file']);
+                            $item .= '<div class="b-works_items-item items-grid col-1">
+                                         <div class="bl">
+                                            <div class="ch-item ch-img" style="background-image:url(img/' . $img_path[0] . '/800x800/' . $img_path[1] . '.jpg);
+                                            filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\'img/' . $img_path[0] . '/800x800/' . $img_path[1] . '.jpg\',sizingMethod=\'scale\')">
+                                                <div class="ch-info">
+                                                    <a href="img/' . $img_path[0] . '/800x800/' . $img_path[1] . '.jpg"><span>' . $project['name'] . '</span></a>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                 <a class="b-works_items-item_url">' . $project['url'] . '</a>
-                                 <div class="b-works_items-item_desc">' . $project['description'] . '</div>
-                             </div>';
-                }
-                if ($_SESSION['user_login']) {
-                    $item .= '<div class="b-works_items-item_add items-grid col-1">
-                                 <a id="show_add_project" href="#modal">
-                                     Добавить проект
-                                 </a>
-                             </div>';
-                }
-                echo $item;
-                ?>
+                                         <a class="b-works_items-item_url">' . $project['url'] . '</a>
+                                         <div class="b-works_items-item_desc">' . $project['description'] . '</div>
+                                     </div>';
+                                }
+                        if ($_SESSION['user_login']) {
+                            $item .= '<div class="b-works_items-item_add items-grid col-1">
+                                        <div class="bl">
+                                             <a id="show_add_project" href="#modal">
+                                                 Добавить проект
+                                             </a>
+                                         </div>
+                                     </div>';
+                        }
+                        echo $item;
+                        ?>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

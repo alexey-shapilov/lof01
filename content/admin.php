@@ -15,6 +15,7 @@ if (!defined('INIT')) exit('No direct script access allowed');
     <link rel="stylesheet" href="/css/style.css"/>
 
     <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.placeholder.js"></script>
     <script src="/js/app.js"></script>
 </head>
 <body>
@@ -25,11 +26,11 @@ if (!defined('INIT')) exit('No direct script access allowed');
         <div class="b-admin_items">
             <div class="b-admin_items-item">
                 <label for="">Логин</label>
-                <input id="login" name="login" class="b-admin_items-item_input" type="text"/>
+                <input id="login" name="login" class="b-admin_items-item_input" type="text" placeholder="Введите логин"/>
             </div>
             <div class="b-admin_items-item">
                 <label for="password">Пароль</label>
-                <input type="password" name="password" id="password" class="b-admin_items-item_input" type="text"/>
+                <input type="password" name="password" id="password" class="b-admin_items-item_input" type="text" placeholder="Введите пароль"/>
             </div>
         </div>
         <button class="b-admin_submit">Войти</button>

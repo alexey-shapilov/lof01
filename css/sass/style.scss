@@ -48,10 +48,7 @@ $head-height: 116px;
   height: 46px;
   width: 46px;
   margin-left: 24px;
-  &:hover {
-    background-position: -46px;
-    cursor: pointer;
-  }
+  cursor: pointer;
   &:first-child {
     margin-left: 0;
   }
@@ -59,22 +56,37 @@ $head-height: 116px;
 
 .b-head_socials-vk {
   @include b-head_socials-item;
-  background: url("img/vk.png");
+  background: url("img/socials-sptite.png");
+  &:hover {
+    background-position: -46px 0;
+  }
 }
 
 .b-head_socials-twitter {
   @include b-head_socials-item;
-  background: url("img/twitter.png");
+  background: url("img/socials-sptite.png");
+  background-position: 0 -46px;
+  &:hover {
+    background-position: -46px -46px;
+  }
 }
 
 .b-head_socials-facebook {
   @include b-head_socials-item;
-  background: url("img/facebook.png");
+  background: url("img/socials-sptite.png");
+  background-position: 0 -92px;
+  &:hover {
+    background-position: -46px -92px;
+  }
 }
 
 .b-head_socials-github {
   @include b-head_socials-item;
-  background: url("img/github.png");
+  background: url("img/socials-sptite.png");
+  background-position: 0 -138px;
+  &:hover {
+    background-position: -46px -138px;
+  }
 }
 
 .split-line {
@@ -129,7 +141,8 @@ $nav_width: 250px;
     width: 202px;
     padding-left: 18px;
     margin: 0 auto;
-    border-bottom: 2px solid #3ba8c0;
+//    border-bottom: 2px solid #3ba8c0;
+    border-top: 2px solid #3ba8c0;
     height: $menu_item_height - 2;
   }
 
@@ -137,9 +150,11 @@ $nav_width: 250px;
     color: #3ba8c0;
   }
 
-  &:last-child a {
+//  &:last-child a {
+  &:first-child a {
     height: $menu_item_height;
-    border-bottom: none;
+//    border-bottom: none;
+    border-top: none;
   }
 
   &.active {
@@ -237,13 +252,15 @@ $ico_size: 38px;
 
 .b-footer {
   margin-top: 39px;
-  .b-contacts {
-    display: none;
-  }
-  .b-head_socials {
-    display: none;
-  }
 }
+
+.b-mob_contacts {
+  display: none;
+}
+.b-mob_socials {
+  display: none;
+}
+
 
 .b-footer_body {
   padding-top: 1px;
@@ -259,3 +276,4 @@ $ico_size: 38px;
 }
 
 @import "pl";
+@import "mob";
