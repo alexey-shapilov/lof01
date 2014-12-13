@@ -86,55 +86,42 @@ $tooltip_color: #f97e76;
 @mixin b-tooltip_arrow_right {
   float: left;
   margin-top: 7px;
-  .arrow1 {
-    border-bottom: 5px solid $tooltip_color;
-    border-right: 7px solid transparent;
+  .arrow {
+    border-left-color: $tooltip_color;
+    border-width: 5px 0 5px 7px;
   }
-  .arrow2 {
-    border-top: 5px solid $tooltip_color;
-    border-right: 7px solid transparent;
-  }
+}
+
+.arrow {
+  border-color: transparent;
+  border-style: solid;
 }
 
 @mixin b-tooltip_arrow_left {
   float: left;
   margin-top: 7px;
-  .arrow1 {
-    border-bottom: 5px solid $tooltip_color;
-    border-left: 7px solid transparent;
-  }
-  .arrow2 {
-    border-top: 5px solid $tooltip_color;
-    border-left: 7px solid transparent;
+  .arrow {
+    border-right-color: $tooltip_color;
+    border-width: 5px 7px 5px 0;
   }
 }
 
 @mixin b-tooltip_arrow_down {
   margin: 0 auto;
   width: 14px;
-  .arrow1 {
-    border-top: 5px solid $tooltip_color;
-    border-left: 7px solid transparent;
+  .arrow {
     float: left;
-  }
-  .arrow2 {
-    border-top: 5px solid $tooltip_color;
-    border-right: 7px solid transparent;
-    float: left;
+    border-top-color: $tooltip_color;
+    border-width: 7px 5px 0 5px;
   }
 }
 
 @mixin b-arrow_up($clr) {
   float: left;
-  .arrow1 {
-    float: left;
-    border-bottom: 15px solid $clr;
-    border-left: 14px solid transparent;
-  }
-  .arrow2 {
-    float: left;
-    border-bottom: 15px solid $clr;
-    border-right: 14px solid transparent;
+  .arrow {
+//    float: left;
+    border-bottom-color: $clr;
+    border-width: 0 15px 14px 14px;
   }
 }
 

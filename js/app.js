@@ -1,5 +1,7 @@
 (function ($) {
     $(document).ready(function () {
+
+        // media query
         var
             media_query_lt320 = {
                 matches: false
@@ -20,10 +22,11 @@
             });
         }
 
-        $('.active').next().toggleClass('noactive');
+        $('.active').next().toggleClass('noactive'); // применяет класс к следующему элементу после активного в меню
 
-        if ($.fancybox) $(".ch-info a").fancybox();
+        if ($.fancybox) $(".ch-info a").fancybox(); // fancybox для примеров работ
 
+        // обработка нажатия на иконку меню в мобильных вариантах сайта
         $('#i-menu').on('click', function () {
             var nav = $('#nav-block');
             if (nav.is(":hidden")) {
@@ -33,6 +36,7 @@
             }
         });
 
+        // обработка нажатия на кнопку добавления проекта
         $('#submit_add_project').on('click', function (event) {
             var name_project = $('#name_project'),
                 file_name = $('#file_name'),
@@ -43,11 +47,14 @@
                 parent = $('body');
             err = false;
             event.preventDefault();
+
+            // валидация, и вывод тултипов при ошибках
             if (name_project.val() == '' || name_project.val() == name_project.attr('placeholder')) {
                 if (mob) {
-                    addToolTip(name_project, 'down', parent, 'введите название', {width: 85});
+                    addToolTip(name_project, 'down', parent, 'введите название', {width: 85});  // поквзывает подсказку над элементом
                 } else {
-                    addToolTip(name_project, 'right', parent, 'введите название', {dy: 8});
+                    // показывает подсказку слева от элемента, второй параметр функции указывает на направление стрелки
+                    addToolTip(name_project, 'right', parent, 'введите название', {dy: 8}); // показывает подсказку слева от элемента
                 }
                 err = true;
             }
@@ -58,7 +65,7 @@
                         offsetX: -51
                     });
                 } else {
-                    addToolTip(file_name, 'right', parent, 'укажите изображение', {dy: 8});
+                    addToolTip(file_name, 'right', parent, 'укажите изображение', {offsetY: 8});
                 }
                 err = true;
             }
@@ -66,7 +73,7 @@
                 if (mob) {
                     addToolTip(url_project, 'down', parent, 'ссылку на проект', {width: 85});
                 } else {
-                    addToolTip(url_project, 'right', parent, 'ссылку на проект', {dy: 8});
+                    addToolTip(url_project, 'right', parent, 'ссылку на проект', {offsetY: 8});
                 }
                 err = true;
             }
@@ -148,10 +155,10 @@
                                         addToolTip(elem, 'down', parent, response.errors['name_feedback']);
                                     } else {
                                         addToolTip(elem, 'right', parent, response.errors['name_feedback'], {
-                                            dy: 8
+                                            offsetY: 8
                                         });
                                     }
-                                    elem.val(elem.attr('placeholder'));
+                                    !supports_input_placeholder() ? elem.val(elem.attr('placeholder')) : null;
                                 }
                                 if (response.errors['email_feedback']) {
                                     elem = $('#email_feedback');
@@ -159,10 +166,10 @@
                                         addToolTip(elem, 'down', parent, response.errors['email_feedback']);
                                     } else {
                                         addToolTip(elem, 'left', parent, response.errors['email_feedback'], {
-                                            dy: 8
+                                            offsetY: 8
                                         });
                                     }
-                                    elem.val(elem.attr('placeholder'));
+                                    !supports_input_placeholder() ? elem.val(elem.attr('placeholder')) : null;
                                 }
                                 if (response.errors['msg_feedback']) {
                                     elem = $('#msg_feedback');
@@ -170,10 +177,10 @@
                                         addToolTip(elem, 'down', parent, response.errors['msg_feedback']);
                                     } else {
                                         addToolTip(elem, 'right', parent, response.errors['msg_feedback'], {
-                                            dy: 8
+                                            offsetY: 8
                                         });
                                     }
-                                    elem.val(elem.attr('placeholder'));
+                                    !supports_input_placeholder() ? elem.val(elem.attr('placeholder')) : null;
                                 }
 
                                 if (response.errors['captcha']) {
@@ -182,12 +189,13 @@
                                         addToolTip(elem, 'down', parent, response.errors['captcha']);
                                     } else {
                                         addToolTip(elem, 'left', parent, response.errors['captcha'], {
-                                            dy: 4
+                                            offsetY: 4
                                         });
                                     }
-                                    elem.val(elem.attr('placeholder'));
+                                    !supports_input_placeholder() ? elem.val(elem.attr('placeholder')) : null;
                                 }
 
+                                // Обработчик на фокус элемента ввода, при фокусе выключает сообщение об ошибке
                                 $('.b-feedback_items').on('focus', '.b-feedback_items-item_input', function () {
                                     var $this = $(this);
                                     if ($this.hasClass('error')) {
@@ -224,6 +232,7 @@
             });
         });
 
+        // Обработчик нажатия кнопки "очистить" на странице обратной связи. Восстанавливает placeholder для ie8
         $('#clear_feedback').on('click', function (e) {
             if (!supports_input_placeholder()) {
                 e.preventDefault();
@@ -235,6 +244,7 @@
             }
         });
 
+        // Обработчик нажатия кнопки входа на странице авторизации
         $('.b-admin_submit').on('click', function (e) {
             var
                 $login = $('#login'),
@@ -245,7 +255,7 @@
                 if (mob) {
                     addToolTip($password, 'down', parent, 'введите пароль', {float: 'left', offsetX: 7});
                 } else {
-                    addToolTip($password, 'right', parent, 'введите пароль', {dy: 20});
+                    addToolTip($password, 'right', parent, 'введите пароль', {offsetY: 20});
                 }
 
                 err = true;
@@ -254,7 +264,7 @@
                 if (mob) {
                     addToolTip($login, 'down', parent, 'введите логин', {float: 'left', offsetX: 7});
                 } else {
-                    addToolTip($login, 'right', parent, 'введите логин', {dy: 20});
+                    addToolTip($login, 'right', parent, 'введите логин', {offsetY: 20});
                 }
                 err = true;
             }
@@ -270,19 +280,36 @@
             }
         });
 
+        // активация плагина для имитации placeholder в ie8
         $('input, textarea').placeholder();
     });
 })(jQuery);
 
+// функция вызывается при возвращении из ajax запроса на загрузку картинки
+// запоминаем token загруженного файла
+
+/**
+ * Функция вызывается при возвращении из ajax запроса на загрузку картинки, запоминаем token загруженного файла
+ * @param d {object} Объект возвращенный скриптом загрузки картинки
+ */
 function onResponse(d) {
-    $("#file_project").data('token', d.rel).val("").prependTo(".modal .upload");
+    $("#file_project").data('token', d.rel);
 }
 
+/**
+ * Проверяет поддержку атрибута placeholder
+ * @returns {boolean}
+ */
 function supports_input_placeholder() {
     var i = document.createElement('input');
     return 'placeholder' in i;
 }
 
+/**
+ * Добавляет сообщение об ошибке
+ * @param parent {object} Элемент в который добавляется сообщение, должен быть обернут в jQuery
+ * @param text {string} Текст сообщения
+ */
 function addErrBlock(parent, text) {
     var err_block =
         '<div class="error error_msg">\
@@ -295,6 +322,14 @@ function addErrBlock(parent, text) {
     }
 }
 
+/**
+ * Добавляет подсказу и класс error к элементу
+ * @param elem {object} Элемент к которому добавляется подсказка об ошибке, должен быть завернут в jQuery
+ * @param type {string} Направление стрелки
+ * @param parent {object} Родительский элемент в дереве DOM для подсказок, должен быть завернут в jQuery
+ * @param text {string} Текст подсказки
+ * @param position {object} Объект для позиционирования, может содержать свойства top, left, right, offsetX, offsetY, float
+ */
 function addToolTip(elem, type, parent, text, position) {
     var tooltip_right =
             '<div class="b-tooltip">\
@@ -302,15 +337,13 @@ function addToolTip(elem, type, parent, text, position) {
                     ' + text + '\
                 </div>\
                 <div class="b-tooltip_arrow_r">\
-                    <div class="arrow1"></div>\
-                    <div class="arrow2"></div>\
+                    <div class="arrow"></div>\
                 </div>\
             </div>',
         tooltip_left =
             '<div class="b-tooltip">\
                 <div class="b-tooltip_arrow_l">\
-                    <div class="arrow1"></div>\
-                    <div class="arrow2"></div>\
+                    <div class="arrow"></div>\
                 </div>\
                 <div class="b-tooltip_text">\
                      ' + text + '\
@@ -322,8 +355,7 @@ function addToolTip(elem, type, parent, text, position) {
                      ' + text + '\
                 </div>\
                 <div class="b-tooltip_arrow_d">\
-                    <div class="arrow1"></div>\
-                    <div class="arrow2"></div>\
+                    <div class="arrow"></div>\
                 </div>\
             </div>',
         $tooltip;
@@ -338,47 +370,52 @@ function addToolTip(elem, type, parent, text, position) {
     //        elem.toggleClass('error');
     //    }
     //} else {
-        if (type == 'left') {
-            $tooltip = $(tooltip_left);
-        } else if (type == 'right') {
-            $tooltip = $(tooltip_right);
-        } else if (type == 'down') {
-            $tooltip = $(tooltip_down);
-        }
+    if (type == 'left') {
+        $tooltip = $(tooltip_left);
+    } else if (type == 'right') {
+        $tooltip = $(tooltip_right);
+    } else if (type == 'down') {
+        $tooltip = $(tooltip_down);
+    }
 
-        elem.toggleClass('error');
-        elem.data('tooltip', $tooltip);
-        parent.prepend($tooltip);
+    elem.toggleClass('error');
+    elem.data('tooltip', $tooltip);
+    parent.prepend($tooltip);
 
-        var offsetX = position.offsetX ? position.offsetX : 0,
-            width = position.width ? position.width :
-            $tooltip.find('.b-tooltip_text').outerWidth() + $tooltip.find('[class^="b-tooltip_arrow"]').outerHeight();
-        if (type == 'right') {
-            offsetX = -width + offsetX;
-        } else if (type == 'left') {
-            offsetX = elem.outerWidth() + offsetX;
-        }
+    var offsetX = position.offsetX ? position.offsetX : 0,
+        width = position.width ? position.width :
+        $tooltip.find('.b-tooltip_text').outerWidth() + $tooltip.find('[class^="b-tooltip_arrow"]').outerHeight();
+    if (type == 'right') {
+        offsetX = -width + offsetX;
+    } else if (type == 'left') {
+        offsetX = elem.outerWidth() + offsetX;
+    }
 
-        $tooltip.width(width + 1);
+    $tooltip.width(width + 1);
 
-        var
-            pos = $tooltip.css('position') == 'fixed' ? elem[0].getBoundingClientRect() : getCoords(elem[0]),
-            top = position.top ? position.top : pos.top + (position.dy ? position.dy : 0),
-            left = position.left ? position.left + offsetX : pos.left + offsetX,
-            right = position.right ? position.right + offsetX : document.body.clientWidth - pos.left - (position.float != 'left' ? elem.outerWidth() : $tooltip.width()) + offsetX;
+    var
+        pos = $tooltip.css('position') == 'fixed' ? elem[0].getBoundingClientRect() : getCoords(elem[0]),
+        top = position.top ? position.top : pos.top + (position.offsetY ? position.offsetY : 0),
+        left = position.left ? position.left + offsetX : pos.left + offsetX,
+        right = position.right ? position.right + offsetX : document.body.clientWidth - pos.left - (position.float != 'left' ? elem.outerWidth() : $tooltip.width()) + offsetX;
 
-        if (type == 'down') {
-            $tooltip.css('right', right);
-            $tooltip.css('top', top - $tooltip.outerHeight());
-        } else {
-            $tooltip.css('left', left);
-            $tooltip.css('top', top);
-        }
+    if (type == 'down') {
+        $tooltip.css('right', right);
+        $tooltip.css('top', top - $tooltip.outerHeight());
+    } else {
+        $tooltip.css('left', left);
+        $tooltip.css('top', top);
+    }
     //}
 }
 
+/**
+ * Возвращает координаты относительно документа
+ * @param elem {object} DOM элемент, для которого возвращаются координаты
+ * @returns {{top: number, left: number}}
+ */
 function getCoords(elem) {
-    var box = elem.getBoundingClientRect();
+    var box = elem.getBoundingClientRect(); // координаты элемента относительно окна браузера
 
     var body = document.body;
     var docEl = document.documentElement;

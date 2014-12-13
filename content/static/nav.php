@@ -4,8 +4,7 @@ $active_menu = $query[0];
 ?>
 <div id="nav-block" class="b-nav left">
     <div class="nav-block_arrow_up">
-        <div class="arrow1"></div>
-        <div class="arrow2"></div>
+        <div class="arrow"></div>
     </div>
     <div class="b-menu">
         <ul class="b-menu_items">

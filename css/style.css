@@ -73,7 +73,13 @@ h1 {
   cursor: pointer;
 }
 
-/* line 141, sass/_common.scss */
+/* line 95, sass/_common.scss */
+.arrow {
+  border-color: transparent;
+  border-style: solid;
+}
+
+/* line 128, sass/_common.scss */
 .b-tooltip {
   display: inline;
   position: fixed;
@@ -81,57 +87,41 @@ h1 {
   z-index: 20000;
 }
 
-/* line 148, sass/_common.scss */
+/* line 135, sass/_common.scss */
 .b-tooltip_arrow_l {
   float: left;
   margin-top: 7px;
 }
-/* line 102, sass/_common.scss */
-.b-tooltip_arrow_l .arrow1 {
-  border-bottom: 5px solid #f97e76;
-  border-left: 7px solid transparent;
-}
-/* line 106, sass/_common.scss */
-.b-tooltip_arrow_l .arrow2 {
-  border-top: 5px solid #f97e76;
-  border-left: 7px solid transparent;
+/* line 103, sass/_common.scss */
+.b-tooltip_arrow_l .arrow {
+  border-right-color: #f97e76;
+  border-width: 5px 7px 5px 0;
 }
 
-/* line 152, sass/_common.scss */
+/* line 139, sass/_common.scss */
 .b-tooltip_arrow_r {
   float: left;
   margin-top: 7px;
 }
 /* line 89, sass/_common.scss */
-.b-tooltip_arrow_r .arrow1 {
-  border-bottom: 5px solid #f97e76;
-  border-right: 7px solid transparent;
-}
-/* line 93, sass/_common.scss */
-.b-tooltip_arrow_r .arrow2 {
-  border-top: 5px solid #f97e76;
-  border-right: 7px solid transparent;
+.b-tooltip_arrow_r .arrow {
+  border-left-color: #f97e76;
+  border-width: 5px 0 5px 7px;
 }
 
-/* line 156, sass/_common.scss */
+/* line 143, sass/_common.scss */
 .b-tooltip_arrow_d {
   margin: 0 auto;
   width: 14px;
 }
-/* line 115, sass/_common.scss */
-.b-tooltip_arrow_d .arrow1 {
-  border-top: 5px solid #f97e76;
-  border-left: 7px solid transparent;
+/* line 112, sass/_common.scss */
+.b-tooltip_arrow_d .arrow {
   float: left;
-}
-/* line 120, sass/_common.scss */
-.b-tooltip_arrow_d .arrow2 {
-  border-top: 5px solid #f97e76;
-  border-right: 7px solid transparent;
-  float: left;
+  border-top-color: #f97e76;
+  border-width: 7px 5px 0 5px;
 }
 
-/* line 160, sass/_common.scss */
+/* line 147, sass/_common.scss */
 .b-tooltip_text {
   float: left;
   background: #f97e76;
@@ -168,7 +158,7 @@ h1 {
   border-radius: 4px;
   padding-bottom: 26px;
 }
-/* line 205, sass/_common.scss */
+/* line 192, sass/_common.scss */
 .b-main-info:after, .b-experience:after, .b-education:after {
   display: block;
   clear: both;
@@ -344,7 +334,7 @@ h1 {
   padding-bottom: 26px;
   padding: 0;
 }
-/* line 205, sass/_common.scss */
+/* line 192, sass/_common.scss */
 .b-works:after {
   display: block;
   clear: both;
@@ -645,11 +635,11 @@ h1 {
   width: 139px;
   height: 33px;
 }
-/* line 192, sass/_common.scss */
+/* line 179, sass/_common.scss */
 .b-form-modal_btn-submit:active {
   border-top: 2px solid #3ba8c0 !important;
 }
-/* line 195, sass/_common.scss */
+/* line 182, sass/_common.scss */
 .b-form-modal_btn-submit:hover {
   border-color: #48cbe8;
 }
@@ -730,7 +720,7 @@ h1 {
   border-radius: 4px;
   padding-bottom: 26px;
 }
-/* line 205, sass/_common.scss */
+/* line 192, sass/_common.scss */
 .b-feedback:after {
   display: block;
   clear: both;
@@ -753,13 +743,13 @@ h1 {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 222, sass/_common.scss */
+/* line 209, sass/_common.scss */
 .b-feedback .error_msg h1 {
   font-size: 25px;
   padding: 0;
   margin: 0;
 }
-/* line 228, sass/_common.scss */
+/* line 215, sass/_common.scss */
 .b-feedback .error_msg p {
   font-size: 15px;
   margin: 0;
@@ -914,11 +904,11 @@ h1 {
   height: 31px;
   margin: 0;
 }
-/* line 192, sass/_common.scss */
+/* line 179, sass/_common.scss */
 .b-feedback_items-buttons-submit:active {
   border-top: 2px solid #3ba8c0 !important;
 }
-/* line 195, sass/_common.scss */
+/* line 182, sass/_common.scss */
 .b-feedback_items-buttons-submit:hover {
   border-color: #48cbe8;
 }
@@ -1068,11 +1058,11 @@ h1 {
   height: 50px;
   margin: 34px auto;
 }
-/* line 192, sass/_common.scss */
+/* line 179, sass/_common.scss */
 .b-admin_submit:active {
   border-top: 2px solid #3ba8c0 !important;
 }
-/* line 195, sass/_common.scss */
+/* line 182, sass/_common.scss */
 .b-admin_submit:hover {
   border-color: #48cbe8;
 }
@@ -1520,17 +1510,10 @@ h1 {
     right: 42px;
     top: -15px;
   }
-  /* line 129, sass/_common.scss */
-  .nav-block_arrow_up .arrow1 {
-    float: left;
-    border-bottom: 15px solid #3ba8c0;
-    border-left: 14px solid transparent;
-  }
-  /* line 134, sass/_common.scss */
-  .nav-block_arrow_up .arrow2 {
-    float: left;
-    border-bottom: 15px solid #3ba8c0;
-    border-right: 14px solid transparent;
+  /* line 121, sass/_common.scss */
+  .nav-block_arrow_up .arrow {
+    border-bottom-color: #3ba8c0;
+    border-width: 0 15px 14px 14px;
   }
 
   /* line 21, sass/_pl.scss */
