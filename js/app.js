@@ -3,9 +3,21 @@
         var
             media_query_lt320 = {
                 matches: false
-            };
+            },
+            mob = false;
         if (window.matchMedia) {
             media_query_lt320 = window.matchMedia("screen and (max-width: 750px)");
+            if (media_query_lt320.matches) {
+                mob = true;
+            }
+
+            media_query_lt320.addListener(function (m) {
+                if (m.matches) {
+                    mob = true;
+                } else {
+                    mob = false;
+                }
+            });
         }
 
         $('.active').next().toggleClass('noactive');
@@ -32,7 +44,7 @@
             err = false;
             event.preventDefault();
             if (name_project.val() == '' || name_project.val() == name_project.attr('placeholder')) {
-                if (media_query_lt320.matches) {
+                if (mob) {
                     addToolTip(name_project, 'down', parent, 'введите название', {width: 85});
                 } else {
                     addToolTip(name_project, 'right', parent, 'введите название', {dy: 8});
@@ -40,7 +52,7 @@
                 err = true;
             }
             if (file_name.text() == '' || file_name.text() == $('#file_project').attr('placeholder')) {
-                if (media_query_lt320.matches) {
+                if (mob) {
                     addToolTip(file_name, 'down', parent, 'изображение', {
                         width: 65,
                         offsetX: -51
@@ -51,7 +63,7 @@
                 err = true;
             }
             if (url_project.val() == '' || url_project.val() == url_project.attr('placeholder')) {
-                if (media_query_lt320.matches) {
+                if (mob) {
                     addToolTip(url_project, 'down', parent, 'ссылку на проект', {width: 85});
                 } else {
                     addToolTip(url_project, 'right', parent, 'ссылку на проект', {dy: 8});
@@ -132,7 +144,7 @@
                                 parent = $('body');
                                 if (response.errors['name_feedback']) {
                                     elem = $('#name_feedback');
-                                    if (media_query_lt320.matches) {
+                                    if (mob) {
                                         addToolTip(elem, 'down', parent, response.errors['name_feedback']);
                                     } else {
                                         addToolTip(elem, 'right', parent, response.errors['name_feedback'], {
@@ -143,7 +155,7 @@
                                 }
                                 if (response.errors['email_feedback']) {
                                     elem = $('#email_feedback');
-                                    if (media_query_lt320.matches) {
+                                    if (mob) {
                                         addToolTip(elem, 'down', parent, response.errors['email_feedback']);
                                     } else {
                                         addToolTip(elem, 'left', parent, response.errors['email_feedback'], {
@@ -154,7 +166,7 @@
                                 }
                                 if (response.errors['msg_feedback']) {
                                     elem = $('#msg_feedback');
-                                    if (media_query_lt320.matches) {
+                                    if (mob) {
                                         addToolTip(elem, 'down', parent, response.errors['msg_feedback']);
                                     } else {
                                         addToolTip(elem, 'right', parent, response.errors['msg_feedback'], {
@@ -166,7 +178,7 @@
 
                                 if (response.errors['captcha']) {
                                     elem = $('#captcha');
-                                    if (media_query_lt320.matches) {
+                                    if (mob) {
                                         addToolTip(elem, 'down', parent, response.errors['captcha']);
                                     } else {
                                         addToolTip(elem, 'left', parent, response.errors['captcha'], {
@@ -230,7 +242,7 @@
                 parent = $('body'),
                 err = false;
             if ($password.val() == '') {
-                if (media_query_lt320.matches) {
+                if (mob) {
                     addToolTip($password, 'down', parent, 'введите пароль', {float: 'left', offsetX: 7});
                 } else {
                     addToolTip($password, 'right', parent, 'введите пароль', {dy: 20});
@@ -239,7 +251,7 @@
                 err = true;
             }
             if ($login.val() == '') {
-                if (media_query_lt320.matches) {
+                if (mob) {
                     addToolTip($login, 'down', parent, 'введите логин', {float: 'left', offsetX: 7});
                 } else {
                     addToolTip($login, 'right', parent, 'введите логин', {dy: 20});
@@ -320,12 +332,12 @@ function addToolTip(elem, type, parent, text, position) {
         position = {};
     }
 
-    if (elem.data('tooltip')) {
-        elem.data('tooltip').prependTo(parent);
-        if (!elem.hasClass('error')) {
-            elem.toggleClass('error');
-        }
-    } else {
+    //if (elem.data('tooltip')) {
+    //    elem.data('tooltip').prependTo(parent);
+    //    if (!elem.hasClass('error')) {
+    //        elem.toggleClass('error');
+    //    }
+    //} else {
         if (type == 'left') {
             $tooltip = $(tooltip_left);
         } else if (type == 'right') {
@@ -362,7 +374,7 @@ function addToolTip(elem, type, parent, text, position) {
             $tooltip.css('left', left);
             $tooltip.css('top', top);
         }
-    }
+    //}
 }
 
 function getCoords(elem) {
