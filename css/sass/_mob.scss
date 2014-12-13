@@ -1,4 +1,5 @@
-@media only screen and (max-width: 320px) {
+//@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 750px) {
   .b-head, .b-head_logo {
     height: 55px;
   }
@@ -249,27 +250,27 @@
     }
   }
 
-  .b-form-modal{
+  .b-form-modal {
     width: 96.88%;
   }
 
-  .b-form-modal_inputs-edit, .b-form-modal_inputs-ta{
+  .b-form-modal_inputs-edit, .b-form-modal_inputs-ta {
     width: 86.77%;
   }
 
-  .upload{
+  .upload {
     width: 92.90%;
   }
 
-  .b-form-modal_inputs-upload{
+  .b-form-modal_inputs-upload {
     width: 100%;
   }
 
-  .b-form-modal_fn-upload{
+  .b-form-modal_fn-upload {
     width: 75%;
   }
 
-  .btn-upload{
+  .btn-upload {
     width: 18.06%;
   }
 
@@ -370,5 +371,17 @@
     font-size: 21px;
     line-height: 29px;
     margin-top: 18px;
+  }
+
+  .b-tooltip_text {
+    font-size: 9px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .b-feedback {
+    .error_msg {
+      width: 90%;
+    }
   }
 }

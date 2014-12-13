@@ -3,7 +3,6 @@ if (!defined('INIT')) exit('No direct script access allowed');
 
 ob_start();
 ?>
-
     <div class="b-content left">
         <form id="form_feedback" class="b-feedback">
             <h1 class="b-feedback_title">У вас интересный проект? Напишите мне</h1>

@@ -8,7 +8,8 @@ ob_start();
             <h1 class="b-main-info_title">Основная информация</h1>
 
             <div class="b-main-info_portrait left">
-                <img src="/css/img/a.jpg" alt="Моё фото"/>
+                <!--[if IE 8]><img src="/css/img/aie.png" alt="Моё фото"/><![endif]-->
+                <![if !(IE 8)]> <img src="/css/img/a.jpg" alt="Моё фото"/> <![endif]>
             </div>
             <div class="b-main-info_wrapper left">
                 <ul class="b-main-info_info">

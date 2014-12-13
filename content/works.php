@@ -30,7 +30,7 @@ ob_start();
 
                             <div class="upload">
                                 <input id="file_project" name="file_project" class="b-form-modal_inputs-upload"
-                                       type="file" placeholder=""/>
+                                       type="file" placeholder="Загрузите изображение"/>
 
                                 <div>
                                     <span id="file_name" class="b-form-modal_fn-upload">Загрузите изображение</span>
@@ -96,6 +96,14 @@ ob_start();
                                         <div class="bl">
                                              <a id="show_add_project" href="#modal">
                                                  Добавить проект
+                                             </a>
+                                         </div>
+                                     </div>';
+                        } else {
+                            $item .= '<div class="b-works_items-item_add items-grid col-1">
+                                        <div class="bl">
+                                             <a href="admin">
+                                                 Авторизоваться<br>для добавления
                                              </a>
                                          </div>
                                      </div>';

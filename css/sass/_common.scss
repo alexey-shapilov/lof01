@@ -69,7 +69,7 @@ $tooltip_color: #f97e76;
 }
 
 @mixin b-tooltip {
-  position: absolute;
+  position: fixed;
 }
 
 @mixin b-tooltip_text {
@@ -79,6 +79,7 @@ $tooltip_color: #f97e76;
   padding: 2px 15px;
   font-family: fira_sansbook;
   font-size: 13px;
+  text-align: center;
   @include border-radius(4px);
 }
 
@@ -105,6 +106,21 @@ $tooltip_color: #f97e76;
   .arrow2 {
     border-top: 5px solid $tooltip_color;
     border-left: 7px solid transparent;
+  }
+}
+
+@mixin b-tooltip_arrow_down {
+  margin: 0 auto;
+  width: 14px;
+  .arrow1 {
+    border-top: 5px solid $tooltip_color;
+    border-left: 7px solid transparent;
+    float: left;
+  }
+  .arrow2 {
+    border-top: 5px solid $tooltip_color;
+    border-right: 7px solid transparent;
+    float: left;
   }
 }
 
@@ -135,6 +151,10 @@ $tooltip_color: #f97e76;
 
 .b-tooltip_arrow_r {
   @include b-tooltip_arrow_right;
+}
+
+.b-tooltip_arrow_d {
+  @include b-tooltip_arrow_down;
 }
 
 .b-tooltip_text {
@@ -193,7 +213,7 @@ $tooltip_color: #f97e76;
 }
 
 @mixin error_msg {
-  margin: 1px auto;
+  margin: 15px auto;
   padding: 9px;
   border: 1px solid $tooltip_color;
   color: $tooltip_color;

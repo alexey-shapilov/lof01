@@ -1,3 +1,9 @@
+.b-main-info_portrait {
+  img {
+    border: none;
+  }
+}
+
 .modal {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#c8000000, endColorstr=#c8000000);
 }
@@ -28,7 +34,7 @@
     }
     background: #41b9d4;
   }
-  &:first-child + * + *  {
+  &:first-child + * + * {
     .ico {
       background: url('img/phoneico.png');
     }
@@ -47,7 +53,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#96000000, endColorstr=#96000000);
 }
 
-
 .ch-info {
   display: none;
 }
@@ -55,7 +60,7 @@
 .b-main-info_tags-list_tag {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff3ba8c0, endColorstr=#ff2e8ca2);
   display: inline-block;
-  overflow:auto;
+  overflow: auto;
   padding: 0 9px 0 9px;
   line-height: 25px;
 }

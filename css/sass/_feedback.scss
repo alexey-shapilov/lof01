@@ -15,10 +15,10 @@
   color: white;
   padding: 0;
   width: 100%;
-//  height: 74px;
+  //  height: 74px;
   height: 121px;
   line-height: 121px;
-//  padding-top: 47px;
+  //  padding-top: 47px;
   @include border-radius(4px 4px 0 0);
   text-align: center;
   vertical-align: middle;
@@ -124,4 +124,10 @@
 
 .b-feedback {
   position: relative;
+}
+
+.page-feedback {
+  .b-tooltip {
+    position: absolute;
+  }
 }

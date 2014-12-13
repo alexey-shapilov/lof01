@@ -14,7 +14,7 @@ if (!defined('INIT')) exit('No direct script access allowed');
 
     <link rel="stylesheet" href="/css/style.css"/>
 
-    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.mini.1_11.js"></script>
     <script src="/js/jquery.placeholder.js"></script>
     <script src="/js/app.js"></script>
 </head>

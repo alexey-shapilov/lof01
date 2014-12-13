@@ -9,19 +9,19 @@ if (!defined('INIT')) exit('No direct script access allowed');
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png"/>
 
     <link rel="stylesheet" href="/css/style.css"/>
     <link rel="stylesheet" href="/css/fancybox/jquery.fancybox.css"/>
     <!--[if IE 8]><link rel="stylesheet" href="/css/ie8.css"/><![endif]-->
 
-<!--    <script src="/js/jquery.min.js"></script>-->
+    <!--    <script src="/js/jquery.min.js"></script>-->
     <script src="/js/jquery.mini.1_11.js"></script>
     <script src="/css/fancybox/jquery.fancybox.pack.js"></script>
     <script src="/js/jquery.placeholder.js"></script>
     <script src="/js/app.js"></script>
 </head>
-<body>
+<body class="page-<?= $query[0] ?>">
 <div class="wrapper">
     <div class="b-head">
         <div id="header-block">
