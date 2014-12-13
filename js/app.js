@@ -328,7 +328,7 @@ function addErrBlock(parent, text) {
  * @param type {string} Направление стрелки
  * @param parent {object} Родительский элемент в дереве DOM для подсказок, должен быть завернут в jQuery
  * @param text {string} Текст подсказки
- * @param position {object} Объект для позиционирования, может содержать свойства top, left, right, offsetX, offsetY, float
+ * @param position {{top:number, left:number, right:number, offsetX:number, offsetY:number, float:string}=} Объект для позиционирования, может содержать свойства top, left, right, offsetX, offsetY, float
  */
 function addToolTip(elem, type, parent, text, position) {
     var tooltip_right =
