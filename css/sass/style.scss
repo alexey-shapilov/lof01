@@ -41,11 +41,18 @@ $head-height: 116px;
 
 .b-head_socials {
   display: block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-@mixin b-head_socials-item {
-  display: block;
-  float: left;
+.b-head_socials-item {
+  display: inline;
+}
+
+@mixin b-head_socials-item_a {
+  color:transparent;
+  display: inline-block;
   height: 46px;
   width: 46px;
   margin-left: 24px;
@@ -56,7 +63,7 @@ $head-height: 116px;
 }
 
 .b-head_socials-vk {
-  @include b-head_socials-item;
+  @include b-head_socials-item_a;
   background: url("img/socials-sptite.png");
   &:hover {
     background-position: -46px 0;
@@ -64,7 +71,7 @@ $head-height: 116px;
 }
 
 .b-head_socials-twitter {
-  @include b-head_socials-item;
+  @include b-head_socials-item_a;
   background: url("img/socials-sptite.png");
   background-position: 0 -46px;
   &:hover {
@@ -73,7 +80,7 @@ $head-height: 116px;
 }
 
 .b-head_socials-facebook {
-  @include b-head_socials-item;
+  @include b-head_socials-item_a;
   background: url("img/socials-sptite.png");
   background-position: 0 -92px;
   &:hover {
@@ -82,7 +89,7 @@ $head-height: 116px;
 }
 
 .b-head_socials-github {
-  @include b-head_socials-item;
+  @include b-head_socials-item_a;
   background: url("img/socials-sptite.png");
   background-position: 0 -138px;
   &:hover {
@@ -132,34 +139,27 @@ $nav_width: 250px;
 }
 
 .b-menu_items-item {
-  $menu_item_height: 73px;
+  min-height: 73px;
   font-size: 21px;
   color: #fff;
   a {
     display: block;
     color: #959aa8;
-    line-height: $menu_item_height;
     width: 202px;
-    padding-left: 18px;
+    padding: 19px 18px 19px 18px;
     margin: 0 auto;
-//    border-bottom: 2px solid #3ba8c0;
     border-top: 2px solid #3ba8c0;
-    height: $menu_item_height - 2;
   }
 
   & a:hover {
     color: #3ba8c0;
   }
 
-//  &:last-child a {
   &:first-child a {
-    height: $menu_item_height;
-//    border-bottom: none;
     border-top: none;
   }
 
   &.active {
-    height: $menu_item_height;
     background-color: #3ba8c0;
     a {
       cursor: default;
@@ -169,7 +169,6 @@ $nav_width: 250px;
   }
 
   &.noactive {
-    height: $menu_item_height;
     a {
       border: none;
     }

@@ -6,7 +6,7 @@ if (!defined('INIT')) exit('No direct script access allowed');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Портфолио</title>
+    <title>Портфолио - Авторизация</title>
 
     <link rel="icon" type="image/png" href="/favicon.png" />
 

@@ -1,6 +1,8 @@
 <?php
 if (!defined('INIT')) exit('No direct script access allowed');
 
+$title = 'Мои работы';
+
 session_start();
 require_once PATH_MODULES . '/includer.php';
 
