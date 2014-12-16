@@ -68,17 +68,11 @@ h1 {
 }
 
 /* line 56, sass/_common.scss */
-.b-head_socials-wrapper {
-  margin-top: 35px;
-  margin-right: 7.14%;
-}
-
-/* line 61, sass/_common.scss */
 .relative {
   position: relative;
 }
 
-/* line 65, sass/_common.scss */
+/* line 60, sass/_common.scss */
 .i-menu {
   display: none;
   background: url("img/menuico.png");
@@ -87,13 +81,13 @@ h1 {
   cursor: pointer;
 }
 
-/* line 105, sass/_common.scss */
+/* line 100, sass/_common.scss */
 .arrow {
   border-color: transparent;
   border-style: solid;
 }
 
-/* line 138, sass/_common.scss */
+/* line 133, sass/_common.scss */
 .b-tooltip {
   display: inline;
   position: fixed;
@@ -101,41 +95,41 @@ h1 {
   z-index: 20000;
 }
 
-/* line 145, sass/_common.scss */
+/* line 140, sass/_common.scss */
 .b-tooltip_arrow_l {
   float: left;
   margin-top: 7px;
 }
-/* line 113, sass/_common.scss */
+/* line 108, sass/_common.scss */
 .b-tooltip_arrow_l .arrow {
   border-right-color: #f97e76;
   border-width: 5px 7px 5px 0;
 }
 
-/* line 149, sass/_common.scss */
+/* line 144, sass/_common.scss */
 .b-tooltip_arrow_r {
   float: left;
   margin-top: 7px;
 }
-/* line 99, sass/_common.scss */
+/* line 94, sass/_common.scss */
 .b-tooltip_arrow_r .arrow {
   border-left-color: #f97e76;
   border-width: 5px 0 5px 7px;
 }
 
-/* line 153, sass/_common.scss */
+/* line 148, sass/_common.scss */
 .b-tooltip_arrow_d {
   margin: 0 auto;
   width: 14px;
 }
-/* line 122, sass/_common.scss */
+/* line 117, sass/_common.scss */
 .b-tooltip_arrow_d .arrow {
   float: left;
   border-top-color: #f97e76;
   border-width: 7px 5px 0 5px;
 }
 
-/* line 157, sass/_common.scss */
+/* line 152, sass/_common.scss */
 .b-tooltip_text {
   float: left;
   background: #f97e76;
@@ -172,7 +166,7 @@ h1 {
   border-radius: 4px;
   padding-bottom: 26px;
 }
-/* line 202, sass/_common.scss */
+/* line 197, sass/_common.scss */
 .b-main-info:after, .b-experience:after, .b-education:after {
   display: block;
   clear: both;
@@ -348,7 +342,7 @@ h1 {
   padding-bottom: 26px;
   padding: 0;
 }
-/* line 202, sass/_common.scss */
+/* line 197, sass/_common.scss */
 .b-works:after {
   display: block;
   clear: both;
@@ -649,11 +643,11 @@ h1 {
   width: 139px;
   height: 33px;
 }
-/* line 189, sass/_common.scss */
+/* line 184, sass/_common.scss */
 .b-form-modal_btn-submit:active {
   border-top: 2px solid #3ba8c0 !important;
 }
-/* line 192, sass/_common.scss */
+/* line 187, sass/_common.scss */
 .b-form-modal_btn-submit:hover {
   border-color: #48cbe8;
 }
@@ -734,7 +728,7 @@ h1 {
   border-radius: 4px;
   padding-bottom: 26px;
 }
-/* line 202, sass/_common.scss */
+/* line 197, sass/_common.scss */
 .b-feedback:after {
   display: block;
   clear: both;
@@ -757,13 +751,13 @@ h1 {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 219, sass/_common.scss */
+/* line 214, sass/_common.scss */
 .b-feedback .error_msg h1 {
   font-size: 25px;
   padding: 0;
   margin: 0;
 }
-/* line 225, sass/_common.scss */
+/* line 220, sass/_common.scss */
 .b-feedback .error_msg p {
   font-size: 15px;
   margin: 0;
@@ -918,11 +912,11 @@ h1 {
   height: 31px;
   margin: 0;
 }
-/* line 189, sass/_common.scss */
+/* line 184, sass/_common.scss */
 .b-feedback_items-buttons-submit:active {
   border-top: 2px solid #3ba8c0 !important;
 }
-/* line 192, sass/_common.scss */
+/* line 187, sass/_common.scss */
 .b-feedback_items-buttons-submit:hover {
   border-color: #48cbe8;
 }
@@ -1072,11 +1066,11 @@ h1 {
   height: 50px;
   margin: 34px auto;
 }
-/* line 189, sass/_common.scss */
+/* line 184, sass/_common.scss */
 .b-admin_submit:active {
   border-top: 2px solid #3ba8c0 !important;
 }
-/* line 192, sass/_common.scss */
+/* line 187, sass/_common.scss */
 .b-admin_submit:hover {
   border-color: #48cbe8;
 }
@@ -1174,9 +1168,10 @@ h1 {
 .b-head {
   background: #eff3f7;
   height: 115px;
+  position: relative;
 }
 
-/* line 19, sass/style.scss */
+/* line 20, sass/style.scss */
 .b-head_logo {
   height: 116px;
   font-family: helveticaneue_bold;
@@ -1187,13 +1182,13 @@ h1 {
   margin-left: 7.14%;
 }
 
-/* line 29, sass/style.scss */
+/* line 30, sass/style.scss */
 .b-head_logo-element1 {
   margin-top: 23px;
   border-bottom: #6f727e solid 1px;
 }
 
-/* line 34, sass/style.scss */
+/* line 35, sass/style.scss */
 .b-head_logo-element2 {
   font-size: 14px;
   font-family: helveticaneue_thin;
@@ -1202,7 +1197,14 @@ h1 {
   font-weight: normal;
 }
 
-/* line 42, sass/style.scss */
+/* line 43, sass/style.scss */
+.b-head_socials-wrapper {
+  position: absolute;
+  top: 35px;
+  right: 7.14%;
+}
+
+/* line 49, sass/style.scss */
 .b-head_socials {
   display: block;
   list-style: none;
@@ -1210,12 +1212,12 @@ h1 {
   margin: 0;
 }
 
-/* line 49, sass/style.scss */
+/* line 56, sass/style.scss */
 .b-head_socials-item {
   display: inline;
 }
 
-/* line 65, sass/style.scss */
+/* line 72, sass/style.scss */
 .b-head_socials-vk {
   color: transparent;
   display: inline-block;
@@ -1225,16 +1227,16 @@ h1 {
   cursor: pointer;
   background: url("img/socials-sptite.png");
 }
-/* line 60, sass/style.scss */
+/* line 67, sass/style.scss */
 .b-head_socials-vk:first-child {
   margin-left: 0;
 }
-/* line 68, sass/style.scss */
+/* line 75, sass/style.scss */
 .b-head_socials-vk:hover {
   background-position: -46px 0;
 }
 
-/* line 73, sass/style.scss */
+/* line 80, sass/style.scss */
 .b-head_socials-twitter {
   color: transparent;
   display: inline-block;
@@ -1245,16 +1247,16 @@ h1 {
   background: url("img/socials-sptite.png");
   background-position: 0 -46px;
 }
-/* line 60, sass/style.scss */
+/* line 67, sass/style.scss */
 .b-head_socials-twitter:first-child {
   margin-left: 0;
 }
-/* line 77, sass/style.scss */
+/* line 84, sass/style.scss */
 .b-head_socials-twitter:hover {
   background-position: -46px -46px;
 }
 
-/* line 82, sass/style.scss */
+/* line 89, sass/style.scss */
 .b-head_socials-facebook {
   color: transparent;
   display: inline-block;
@@ -1265,16 +1267,16 @@ h1 {
   background: url("img/socials-sptite.png");
   background-position: 0 -92px;
 }
-/* line 60, sass/style.scss */
+/* line 67, sass/style.scss */
 .b-head_socials-facebook:first-child {
   margin-left: 0;
 }
-/* line 86, sass/style.scss */
+/* line 93, sass/style.scss */
 .b-head_socials-facebook:hover {
   background-position: -46px -92px;
 }
 
-/* line 91, sass/style.scss */
+/* line 98, sass/style.scss */
 .b-head_socials-github {
   color: transparent;
   display: inline-block;
@@ -1285,16 +1287,16 @@ h1 {
   background: url("img/socials-sptite.png");
   background-position: 0 -138px;
 }
-/* line 60, sass/style.scss */
+/* line 67, sass/style.scss */
 .b-head_socials-github:first-child {
   margin-left: 0;
 }
-/* line 95, sass/style.scss */
+/* line 102, sass/style.scss */
 .b-head_socials-github:hover {
   background-position: -46px -138px;
 }
 
-/* line 100, sass/style.scss */
+/* line 107, sass/style.scss */
 .split-line {
   width: 100%;
   height: 3px;
@@ -1302,7 +1304,7 @@ h1 {
   background-size: 100%;
 }
 
-/* line 108, sass/style.scss */
+/* line 115, sass/style.scss */
 .container {
   width: 960px;
   margin: 0 auto;
@@ -1310,21 +1312,21 @@ h1 {
   overflow: hidden;
 }
 
-/* line 118, sass/style.scss */
+/* line 125, sass/style.scss */
 .b-nav {
   font-family: fira_sansbook;
   width: 250px;
 }
-/* line 121, sass/style.scss */
+/* line 128, sass/style.scss */
 .b-nav ul {
   margin: 0;
 }
-/* line 124, sass/style.scss */
+/* line 131, sass/style.scss */
 .b-nav a {
   text-decoration: none;
 }
 
-/* line 129, sass/style.scss */
+/* line 136, sass/style.scss */
 .b-menu {
   width: 100%;
   -webkit-border-radius: 4px;
@@ -1335,18 +1337,18 @@ h1 {
   background-color: #eff3f7;
 }
 
-/* line 137, sass/style.scss */
+/* line 144, sass/style.scss */
 .b-menu_items {
   padding: 0;
 }
 
-/* line 141, sass/style.scss */
+/* line 148, sass/style.scss */
 .b-menu_items-item {
   min-height: 73px;
   font-size: 21px;
   color: #fff;
 }
-/* line 145, sass/style.scss */
+/* line 152, sass/style.scss */
 .b-menu_items-item a {
   display: block;
   color: #959aa8;
@@ -1355,29 +1357,29 @@ h1 {
   margin: 0 auto;
   border-top: 2px solid #3ba8c0;
 }
-/* line 154, sass/style.scss */
+/* line 161, sass/style.scss */
 .b-menu_items-item a:hover {
   color: #3ba8c0;
 }
-/* line 158, sass/style.scss */
+/* line 165, sass/style.scss */
 .b-menu_items-item:first-child a {
   border-top: none;
 }
-/* line 162, sass/style.scss */
+/* line 169, sass/style.scss */
 .b-menu_items-item.active {
   background-color: #3ba8c0;
 }
-/* line 164, sass/style.scss */
+/* line 171, sass/style.scss */
 .b-menu_items-item.active a {
   cursor: default;
   pointer-events: none;
   color: #ffffff;
 }
-/* line 172, sass/style.scss */
+/* line 179, sass/style.scss */
 .b-menu_items-item.noactive a {
   border: none;
 }
-/* line 177, sass/style.scss */
+/* line 184, sass/style.scss */
 .b-menu_items-item:first-child.active {
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
@@ -1385,7 +1387,7 @@ h1 {
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-/* line 180, sass/style.scss */
+/* line 187, sass/style.scss */
 .b-menu_items-item:last-child.active {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
@@ -1394,25 +1396,25 @@ h1 {
   border-radius: 0 0 4px 4px;
 }
 
-/* line 187, sass/style.scss */
+/* line 194, sass/style.scss */
 .b-contacts {
   padding-top: 1px;
   margin-top: 22px;
 }
 
-/* line 192, sass/style.scss */
+/* line 199, sass/style.scss */
 .b-contacts_items {
   padding: 0;
 }
 
-/* line 197, sass/style.scss */
+/* line 204, sass/style.scss */
 .ico {
   float: left;
   width: 38px;
   height: 38px;
 }
 
-/* line 203, sass/style.scss */
+/* line 210, sass/style.scss */
 .b-contacts_items-item {
   font-size: 17px;
   color: white;
@@ -1421,15 +1423,15 @@ h1 {
   height: 40px;
   line-height: 40px;
 }
-/* line 211, sass/style.scss */
+/* line 218, sass/style.scss */
 .b-contacts_items-item a {
   color: white;
 }
-/* line 215, sass/style.scss */
+/* line 222, sass/style.scss */
 .b-contacts_items-item a:hover {
   text-decoration: underline;
 }
-/* line 219, sass/style.scss */
+/* line 226, sass/style.scss */
 .b-contacts_items-item:first-child {
   font-size: 21px;
   -webkit-border-radius: 4px 4px 0 0;
@@ -1438,23 +1440,23 @@ h1 {
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-/* line 223, sass/style.scss */
+/* line 230, sass/style.scss */
 .b-contacts_items-item:nth-child(2) {
   background: #41b9d4;
 }
-/* line 224, sass/style.scss */
+/* line 231, sass/style.scss */
 .b-contacts_items-item:nth-child(2) .ico {
   background: url("img/emailico.png");
 }
-/* line 229, sass/style.scss */
+/* line 236, sass/style.scss */
 .b-contacts_items-item:nth-child(3) {
   background: #48cbe8;
 }
-/* line 230, sass/style.scss */
+/* line 237, sass/style.scss */
 .b-contacts_items-item:nth-child(3) .ico {
   background: url("img/phoneico.png");
 }
-/* line 235, sass/style.scss */
+/* line 242, sass/style.scss */
 .b-contacts_items-item:last-child {
   background: #51daf8;
   -webkit-border-radius: 0 0 4px 4px;
@@ -1463,39 +1465,39 @@ h1 {
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-/* line 236, sass/style.scss */
+/* line 243, sass/style.scss */
 .b-contacts_items-item:last-child .ico {
   background: url("img/skypeico.png");
 }
 
-/* line 246, sass/style.scss */
+/* line 253, sass/style.scss */
 .b-content {
   margin-left: 6.25%;
   width: 650px;
 }
 
-/* line 253, sass/style.scss */
+/* line 260, sass/style.scss */
 .b-footer {
   margin-top: 39px;
 }
 
-/* line 257, sass/style.scss */
+/* line 264, sass/style.scss */
 .b-mob_contacts {
   display: none;
 }
 
-/* line 260, sass/style.scss */
+/* line 267, sass/style.scss */
 .b-mob_socials {
   display: none;
 }
 
-/* line 265, sass/style.scss */
+/* line 272, sass/style.scss */
 .b-footer_body {
   padding-top: 1px;
   height: 78px;
   background: #eff3f7;
 }
-/* line 269, sass/style.scss */
+/* line 276, sass/style.scss */
 .b-footer_body p {
   font-family: fira_sanslight;
   font-size: 13px;
@@ -1525,7 +1527,7 @@ h1 {
     right: 42px;
     top: -15px;
   }
-  /* line 131, sass/_common.scss */
+  /* line 126, sass/_common.scss */
   .nav-block_arrow_up .arrow {
     border-bottom-color: #3ba8c0;
     border-width: 0 15px 14px 14px;
