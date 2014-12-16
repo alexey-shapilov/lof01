@@ -53,5 +53,10 @@ if (!defined('INIT')) exit('No direct script access allowed');
         <p class="b-footer_copyright">&copy; "Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
     </div>
 </div>
+
+<script src="/js/jquery.mini.1_11.js"></script>
+<script src="/css/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/jquery.placeholder.js"></script>
+<script src="/js/app.js"></script>
 </body>
 </html>

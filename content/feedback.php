@@ -1,6 +1,6 @@
 <?php
 if (!defined('INIT')) exit('No direct script access allowed');
-
+$title = 'Обратная связь';
 ob_start();
 ?>
     <div class="b-content left">
