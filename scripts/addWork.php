@@ -28,6 +28,21 @@ if (!count($errors)) {
         )
     );
 
+    $file = explode('::', $_REQUEST['token']);
+
+    $res = '<div class="b-works_items-item items-grid col-1">
+                 <div class="bl">
+                    <div class="ch-item ch-img" style="background-image:url(img/' . $file[0] . '/800x800/' . $file[1] . '.jpg);
+                    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=\'img/' . $file[0] . '/800x800/' . $file[1] . '.jpg\',sizingMethod=\'scale\')">
+                        <div class="ch-info">
+                            <a href="img/' . $file[0] . '/800x800/' . $file[1] . '.jpg"><span>' .$_REQUEST['name_project'] . '</span></a>
+                        </div>
+                    </div>
+                </div>
+                 <a class="b-works_items-item_url">' . $_REQUEST['url_project'] . '</a>
+                 <div class="b-works_items-item_desc">' . $_REQUEST['description_project'] . '</div>
+             </div>';
+
     $id = $db->insertId();
 
     if (!$id) {
@@ -35,4 +50,4 @@ if (!count($errors)) {
     }
 }
 
-echo json_encode(array('errors' => $errors));
+echo json_encode(array('errors' => $errors, 'res' => $res));

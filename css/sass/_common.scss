@@ -7,18 +7,6 @@ ul {
   list-style: none;
 }
 
-.wrapper {
-  background: url(img/comppattern2.png);
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -117px;
-}
-
-.footer-push {
-  height: 117px;
-}
-
 h1 {
   font-family: fira_sansbook;
   font-size: 27px;
@@ -55,6 +43,13 @@ $tooltip_color: #f97e76;
 
 .relative {
   position: relative;
+}
+
+.wrapper {
+  background: url(img/comppattern2.png);
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
 }
 
 .i-menu {
@@ -193,7 +188,7 @@ $tooltip_color: #f97e76;
 @mixin block {
   background: $block_bg_color;
   @include border-radius(4px);
-  padding-bottom: 26px;
+  padding-bottom: 17px;
   &:after {
     display: block;
     clear: both;

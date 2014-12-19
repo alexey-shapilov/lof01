@@ -6,6 +6,10 @@
   }
 }
 
+.feedback-header {
+  margin-bottom: 40px;
+}
+
 .b-feedback_title {
   display: block;
   background: #48cbe8;
@@ -32,17 +36,17 @@
 
 .b-feedback_items {
   width: 402px;
-  margin: 45px auto;
+  margin: 0 auto;
   label {
     color: #959aa8;
     font-family: fira_sanslight;
     font-size: 17px;
   }
   .row {
-    margin-top: 12px;
-  }
-  .row:first-child {
-    margin-top: 33px;
+    margin-bottom: 12px;
+    &.captcha {
+      margin-bottom: 33px;
+    }
   }
 }
 
@@ -51,47 +55,49 @@
   .row &:first-child {
     margin-left: 0;
   }
+  &.captcha {
+    @include element-input;
+    width: 189px;
+    height: 77px;
+    padding: 0;
+    margin-left: 0;
+
+    img {
+      display: block;
+      width: 189px;
+      height: 77px;
+      @include border-radius(4px);
+    }
+  }
+
+  &.confirm {
+    height: 77px;
+    position: relative;
+    .b-feedback_items-item_input {
+      position: absolute;
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 172px;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
 }
 
 .b-feedback_items-item_input {
   @include element-input;
   width: 172px;
   height: 37px;
+  line-height: 37px;
 }
 
 .b-feedback_items-item-text {
   .b-feedback_items-item_input {
     width: 383px;
     height: 178px;
-  }
-}
-
-.b-feedback_items-item.captcha {
-  @include element-input;
-  width: 189px;
-  height: 77px;
-  padding: 0;
-
-  img {
-    display: block;
-    width: 189px;
-    height: 77px;
-    @include border-radius(4px);
-  }
-}
-
-.b-feedback_items-item.confirm {
-  height: 77px;
-  position: relative;
-  .b-feedback_items-item_input {
-    position: absolute;
-    margin: auto;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 172px;
-    height: 30px;
   }
 }
 

@@ -3,7 +3,7 @@ if (!defined('INIT')) exit('No direct script access allowed');
 
 ?>
 
-<div>
+<div class="nav-footer clearfix">
     <div class="b-mob_contacts">
         <ul class="b-contacts_items">
             <li class="b-contacts_items-item">
@@ -35,10 +35,10 @@ if (!defined('INIT')) exit('No direct script access allowed');
     <div class="b1">
         <div class="b2">
             <div class="b-mob_socials">
-                <a href="https://vk.com/alexey.shapilov" class="b-head_socials-vk"></a>
-                <a href="" class="b-head_socials-twitter"> </a>
-                <a href="" class="b-head_socials-facebook"> </a>
-                <a href="" class="b-head_socials-github"> </a>
+                <a href="https://vk.com/alexey.shapilov" class="b-head_socials-vk"><span class="href_text">ВКонтакте</span></a>
+                <a href="" class="b-head_socials-twitter"><span class="href_text">twitter</span></a>
+                <a href="" class="b-head_socials-facebook"><span class="href_text">facebook</span></a>
+                <a href="https://github.com/alexey-shapilov" class="b-head_socials-github"><span class="href_text">github</span></a>
             </div>
         </div>
     </div>
@@ -50,6 +50,13 @@ if (!defined('INIT')) exit('No direct script access allowed');
 <div class="b-footer clearfix">
     <div class="split-line clearfix"></div>
     <div class="b-footer_body">
+        <?php
+        if ($_SESSION['user_login']) {
+            echo '<a href="logout" class="lock lock-open"></a>';
+        } else {
+            echo '<a href="admin" class="lock lock-close"></a>';
+        }
+        ?>
         <p class="b-footer_copyright">&copy; "Это мой сайт, пожалуйста, не копируйте и не воруйте его</p>
     </div>
 </div>

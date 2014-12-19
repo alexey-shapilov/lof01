@@ -1,5 +1,5 @@
 $block_bg_color: #eff3f7;
-$padding-left: 20px;
+$padding-left: 17px;
 
 .fs15 {
   font-family: fira_sansbook;
@@ -25,7 +25,7 @@ $padding-left: 20px;
 }
 
 .b-main-info_portrait {
-  padding-left: $padding-left;
+  padding-left: $padding-left + 3;
   img {
     @include border-radius(50%);
     border: 5px solid #3ba8c0;
@@ -39,7 +39,7 @@ $padding-left: 20px;
   font-family: fira_sansmedium;
   font-size: 17px;
   color: #58697a;
-  padding-left: 35px;
+  padding-left: 39px;
 }
 
 .b-main-info_info {
@@ -48,10 +48,7 @@ $padding-left: 20px;
 }
 
 .b-main-info_info-item {
-  margin-top: 13px;
-  &:first-child {
-    margin-top: 6px;
-  }
+  margin-bottom: 13px;
 }
 
 .b-main-info_tags {
@@ -60,8 +57,8 @@ $padding-left: 20px;
 
 .b-main-info_tags-list {
   width: 200px;
-  margin-left: $padding-left;
-  margin-top: -3px;
+  margin-left: $padding-left + 4;
+  margin-top: 0;
 }
 
 .b-main-info_tags-list_tag {
@@ -90,17 +87,19 @@ $padding-left: 20px;
 .b-experience_title {
   @extend .b-main-info_title;
   width: 189px;
+  margin-bottom: 35px;
 }
 
 .b-experience-items {
   font-family: fira_sansbook;
   display: block;
   padding-left: 65px;
+  margin: 0;
 }
 
 .b-experience-items-item {
-  margin-top: 35px;
   height: 35px;
+  margin-top: 35px;
   .wrapico {
     width: 41px;
   }
@@ -109,6 +108,9 @@ $padding-left: 20px;
     width: 36px;
     height: 34px;
     background: url("img/bagico.png");
+  }
+  &:first-child {
+    margin-top: 0;
   }
 }
 

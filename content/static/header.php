@@ -20,27 +20,22 @@ if (!defined('INIT')) exit('No direct script access allowed');
 <body class="page-<?= $query[0] ?>">
 <div class="wrapper">
     <div class="b-head">
-        <div id="header-block">
-            <div class="b-head_logo">
-                <div class="vert-center">
-                    <div class="b-head_logo-element1">LOFTSCHOOL</div>
-                    <div class="b-head_logo-element2">комплексное обучение web разработке</div>
-                </div>
+        <div class="b-head-wrapper clearfix">
+            <img class="b-head_logo" src="css/img/logo.png" alt=""/>
+            <div class="b-head_socials-wrapper">
+                <ul class="b-head_socials clearfix">
+                    <li class="b-head_socials-item">
+                        <a href="https://vk.com/alexey.shapilov" class="b-head_socials-vk"><span class="href_text">ВКонтакте</span></a>
+                    </li><li class="b-head_socials-item">
+                        <a href="" class="b-head_socials-twitter"><span class="href_text">twitter</span></a>
+                    </li><li class="b-head_socials-item">
+                        <a href="" class="b-head_socials-facebook"><span class="href_text">facebook</span></a>
+                    </li><li class="b-head_socials-item">
+                        <a href="https://github.com/alexey-shapilov" class="b-head_socials-github"><span class="href_text">github</span></a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <div class="b-head_socials-wrapper right">
-            <ul class="b-head_socials clearfix">
-                <li class="b-head_socials-item">
-                    <a href="https://vk.com/alexey.shapilov" class="b-head_socials-vk">ВКонтакте</a>
-                </li><li class="b-head_socials-item">
-                    <a href="" class="b-head_socials-twitter">twitter</a>
-                </li><li class="b-head_socials-item">
-                    <a href="" class="b-head_socials-facebook">facebook</a>
-                </li><li class="b-head_socials-item">
-                    <a href="https://github.com/alexey-shapilov" class="b-head_socials-github">github</a>
-                </li>
-            </ul>
-            <i id='i-menu' class="i-menu left"></i>
+            <i id='i-menu' class="i-menu"></i>
         </div>
         <div class="split-line clearfix"></div>
     </div>

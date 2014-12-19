@@ -87,10 +87,11 @@
                     success: function (response) {
                         if (response != null) {
                             if (response.errors.length !== 0) {
-
                             } else {
                                 $('#modal').hide();
+                                $('.success_text').text('Проект успешно добавлен.');
                                 $('#success').show();
+                                $('#works').append(response.res);
                             }
                         } else alert("Произошла ошибка")
                     }
@@ -204,6 +205,7 @@
                                     }
                                 });
                             } else {
+                                $('#success').show();
                             }
                         } else alert("Произошла ошибка");
                     }
@@ -260,7 +262,7 @@
 
                 err = true;
             }
-            if ($login.val() == '') {
+            if ($login.val() == '' || $login.val() == $login.attr('placeholder')) {
                 if (mob) {
                     addToolTip($login, 'down', parent, 'введите логин', {float: 'left', offsetX: 7});
                 } else {
@@ -280,8 +282,35 @@
             }
         });
 
+        $("#password").on({
+            focus: function () {
+                $("#password-placeholder").hide();
+            },
+            blur: function () {
+                if ($(this).val().length == 0) {
+                    $("#password-placeholder").show();
+                }
+            }
+        });
+
+        $('.lock-open').on('click', function (e) {
+            var $this = $(this);
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                dataType: "json",
+                url: "/logout.ajax",
+                success: function (response) {
+                    $('.success_text').text('Сессия завершена.');
+                    $this .addClass('lock-close');
+                    $this .removeClass('lock-open');
+                    $this.attr('href','admin');
+                    $('#success').show();
+                }
+            });
+        });
         // активация плагина для имитации placeholder в ie8
-        $('input, textarea').placeholder();
+        $('input[type="text"], textarea').placeholder();
     });
 })(jQuery);
 
