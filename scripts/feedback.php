@@ -28,7 +28,7 @@ if (empty($_REQUEST['msg_feedback'])) {
 }
 
 if (!count($errors)) {
-    $mail_res = writeLetter('<noreply@shapilov.zz.mu>', 'loft.01@mail.ru', 'Новый проект', 'Имя: ' . $_REQUEST['name_feedback'] . '<br> Email: ' . $_REQUEST['name_feedback'] . '<br> Сообщение: ' . $_REQUEST['msg_feedback']);
+    $mail_res = writeLetter('<noreplay@shapilov.zz.mu>', 'loft.01@mail.ru', 'Новый проект', 'Имя: ' . $_REQUEST['name_feedback'] . "\n Email: " . $_REQUEST['name_feedback'] . "\n Сообщение: " . $_REQUEST['msg_feedback']);
     if (!$mail_res) {
         $errors['mail'] = 'Сообещине не может быть отправлено';
     }

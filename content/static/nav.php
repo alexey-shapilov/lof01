@@ -14,8 +14,8 @@ $active_menu = $query[0];
         </ul>
     </div>
     <div class="b-contacts">
+        <h2 class="b-contacts_items-item_caption">Контакты</h2>
         <ul class="b-contacts_items">
-            <li class="b-contacts_items-item">Контакты</li>
             <li class="b-contacts_items-item">
                 <div class="ico"></div>
                 <a href="mailto:shapilov@mail.com">shapilov@mail.com</a>

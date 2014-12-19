@@ -28,19 +28,19 @@
 }
 
 .b-contacts_items-item {
-  &:first-child + * {
+  &:first-child {
     .ico {
       background: url('img/emailico.png');
     }
     background: #41b9d4;
   }
-  &:first-child + * + * {
+  &:first-child + * {
     .ico {
       background: url('img/phoneico.png');
     }
     background: #48cbe8;
   }
-  &:first-child + * + * + * {
+  &:first-child + * + * {
     .ico {
       background: url('img/skypeico.png');
     }
@@ -67,4 +67,17 @@
 
 .b-feedback_items-buttons-submit, .b-feedback_items-buttons-clear {
   margin-top: 18px;
+}
+
+.b-admin_items-item {
+  position: relative;
+}
+
+.password-placeholder {
+  position: absolute;
+  color: #48cbe8 !important;
+  font-family: fira_sanslight !important;
+  font-size: 17px !important;
+  left: -142px;
+  top: 73px
 }

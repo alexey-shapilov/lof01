@@ -4,6 +4,13 @@
     height: 55px;
   }
 
+  .b-head_logo {
+    top: 13px;
+    left: 4.38%;
+    width: 136px;
+    height: 33px;
+  }
+
   .b-nav {
     display: none;
     position: absolute;
@@ -16,14 +23,6 @@
     }
   }
 
-  .b-head_logo-element1 {
-    font-size: 20px;
-    margin-top: 9px;
-  }
-  .b-head_logo-element2 {
-    font-size: 8px;
-  }
-
   .b-head_socials {
     display: none;
   }
@@ -34,8 +33,9 @@
 
   .i-menu {
     display: block;
-    margin-left: 58px;
-    margin-top: 12px;
+    position: absolute;
+    right: 19px;
+    top: 18px;
   }
 
   .b-menu {
@@ -46,13 +46,11 @@
   }
 
   .b-menu_items-item {
-    height: 41px;
+    min-height: 41px;
     a {
-      height: 41px;
-      line-height: 41px;
       width: 100%;
       text-align: center;
-      padding-left: 0;
+      padding: 4px 0 4px 0;
     }
     &.active {
       height: 43px;
@@ -68,6 +66,7 @@
 
   .container {
     width: 320px;
+    margin-bottom: 41px;
   }
 
   .b-content, .b-main-info_portrait, .b-main-info_wrapper {
@@ -144,7 +143,7 @@
 
   .b-mob_contacts {
     display: block;
-    margin-top: 41px;
+    margin-bottom: 20px;
     .b-contacts_items {
       margin: 0;
     }
@@ -182,13 +181,14 @@
 
   .b-mob_socials {
     display: block;
-    margin: 20px auto;
+    margin: 0 auto;
     height: 46px;
   }
 
   .split-line {
     height: 2px;
     background: url('/css/img/splitmob.png') repeat-y;
+    background-size: 100%;
   }
 
   .items-grid.col-1 {
@@ -286,13 +286,25 @@
     float: none;
   }
 
+  .feedback-header {
+    margin-bottom: 10px;
+  }
+
   .b-feedback_items {
     width: 100%;
   }
 
+  .b-feedback_items-item {
+    margin-bottom: 20px;
+  }
+
   .b-captcha {
     margin: 0 auto;
-    width: 82.03%;
+    width: 87.80%;
+    label {
+      display: inline-block;
+      font-size: 15px;
+    }
     .b-feedback_items-item {
       float: left;
       &.captcha {
@@ -326,10 +338,11 @@
   }
 
   .wrapper {
-    margin: 0 auto -78px;
+    margin: 0 auto -35px;
   }
+
   .footer-push {
-    height: 86px;
+    height: 35px;
   }
 
   .b-admin {
@@ -383,5 +396,23 @@
     .error_msg {
       width: 90%;
     }
+  }
+
+  .nav-footer {
+    margin-bottom: 20px;
+  }
+
+  .b-footer {
+    height: 35px;
+  }
+
+  .b-footer_body{
+    p {
+      margin: 0 auto;
+    }
+  }
+
+  .lock {
+    display: none;
   }
 }

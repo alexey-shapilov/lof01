@@ -27,27 +27,27 @@
 }
 
 /* line 31, sass/ie8.scss */
-.b-contacts_items-item:first-child + * {
+.b-contacts_items-item:first-child {
   background: #41b9d4;
 }
 /* line 32, sass/ie8.scss */
-.b-contacts_items-item:first-child + * .ico {
+.b-contacts_items-item:first-child .ico {
   background: url("img/emailico.png");
 }
 /* line 37, sass/ie8.scss */
-.b-contacts_items-item:first-child + * + * {
+.b-contacts_items-item:first-child + * {
   background: #48cbe8;
 }
 /* line 38, sass/ie8.scss */
-.b-contacts_items-item:first-child + * + * .ico {
+.b-contacts_items-item:first-child + * .ico {
   background: url("img/phoneico.png");
 }
 /* line 43, sass/ie8.scss */
-.b-contacts_items-item:first-child + * + * + * {
+.b-contacts_items-item:first-child + * + * {
   background: #51daf8;
 }
 /* line 44, sass/ie8.scss */
-.b-contacts_items-item:first-child + * + * + * .ico {
+.b-contacts_items-item:first-child + * + * .ico {
   background: url("img/skypeico.png");
 }
 
@@ -74,4 +74,19 @@
 /* line 68, sass/ie8.scss */
 .b-feedback_items-buttons-submit, .b-feedback_items-buttons-clear {
   margin-top: 18px;
+}
+
+/* line 72, sass/ie8.scss */
+.b-admin_items-item {
+  position: relative;
+}
+
+/* line 76, sass/ie8.scss */
+.password-placeholder {
+  position: absolute;
+  color: #48cbe8 !important;
+  font-family: fira_sanslight !important;
+  font-size: 17px !important;
+  left: -142px;
+  top: 73px;
 }

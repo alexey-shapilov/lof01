@@ -16,7 +16,7 @@ ob_start();
     <div class="b-content left">
         <div id="modal" class="modal add_project">
             <div class="vertical-align">
-                <form id="form_project" class="b-form-modal">
+                <form id="form_project" class="b-form-modal" action="addWork.ajax" method="post">
                     <a class="b-form-modal_btn-close" id="close_add_project" href=""></a>
 
                     <div class="b-form-modal_title">Добавление проекта</div>
@@ -64,7 +64,7 @@ ob_start();
 
                         <h1 class="success_title">Ура!</h1>
 
-                        <p>Проект успешно добавлен.</p>
+                        <p class="success_text">Проект успешно добавлен.</p>
                     </div>
                 </div>
             </div>
@@ -73,11 +73,11 @@ ob_start();
         <div class="b-works">
             <h1 class="b-works_title">Мои работы</h1>
 
-            <div class="b-works_items">
+            <div class="b-works_items clearfix">
                 <div class="b1">
                     <div class="b2">
                         <?php
-                        $item = '';
+                        $item = '<div id="works">';
                         foreach ($projects as $project) {
                             $img_path = explode('::', $project['file']);
                             $item .= '<div class="b-works_items-item items-grid col-1">
@@ -92,7 +92,8 @@ ob_start();
                                          <a class="b-works_items-item_url">' . $project['url'] . '</a>
                                          <div class="b-works_items-item_desc">' . $project['description'] . '</div>
                                      </div>';
-                                }
+                        }
+                        $item .= '</div>';
                         if ($_SESSION['user_login']) {
                             $item .= '<div class="b-works_items-item_add items-grid col-1">
                                         <div class="bl">
