@@ -9,7 +9,7 @@
   //  perspective: 4000px;
 }
 
-.no-ie .item {
+.no-ie .hover .item {
   min-height: 73px;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -31,7 +31,7 @@
   transform: translateZ(-30px) rotateX(95deg);
 }
 
-.no-ie .item .caption {
+.no-ie .hover .item .caption {
   display: block;
   position: absolute;
   top: 0;
@@ -47,7 +47,7 @@
   transition: all .6s;
 }
 
-.no-ie .item .information {
+.no-ie .hover .item .information {
   display: none;
   position: absolute;
   top: 2px;

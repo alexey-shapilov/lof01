@@ -16,8 +16,46 @@
             media_query_lt320.addListener(function (m) {
                 if (m.matches) {
                     mob = true;
+                    $('.b-menu_items-item').each(function () {
+                        var $this = $(this);
+                        if ($this.hasClass('hover')) {
+                            $this.removeClass('hover');
+                        }
+                    });
                 } else {
                     mob = false;
+                    $('.b-menu_items-item').each(function () {
+                        var $this = $(this);
+                        if (!$this.hasClass('hover') && !this.hasClass('active')) {
+                            $this.addClass('hover');
+                        }
+                    });
+                }
+            });
+        }
+
+        if (mob) {
+            $('.b-menu_items-item').each(function () {
+                var $this = $(this);
+                if ($this.hasClass('hover')) {
+                    $this.removeClass('hover');
+                }
+            });
+            $('.no-ie .hover .item').unbind();
+        } else {
+            $('.b-menu_items-item').each(function () {
+                var $this = $(this);
+                if (!$this.hasClass('hover') && !$this.hasClass('active')) {
+                    $this.addClass('hover');
+                }
+            });
+            $('.no-ie .hover .item').on({
+                mouseenter: function () {
+                    $('.no-ie .information').show();
+                    $(this).css('transform', 'translateZ(' + $('.hover').outerHeight() / 2 + 'px) rotateX(90deg)');
+                },
+                mouseleave: function () {
+                    $(this).css('transform', 'none');
                 }
             });
         }
@@ -234,10 +272,10 @@
             });
         });
 
-        $('.no-ie .information').css('height',$('.hover').outerHeight()-20);
-        $('.no-ie .item').css('height',$('.hover').outerHeight());
-        $('.no-ie .information').css('transform','rotateX(-90deg) translateZ('+$('.hover').outerHeight()/2+'px)');
-        $('.no-ie .caption').css('transform','translateZ('+$('.hover').outerHeight()/2+'px)');
+        $('.no-ie .information').css('height', $('.hover').outerHeight() - 20);
+        $('.no-ie .item').css('height', $('.hover').outerHeight());
+        $('.no-ie .information').css('transform', 'rotateX(-90deg) translateZ(' + $('.hover').outerHeight() / 2 + 'px)');
+        $('.no-ie .caption').css('transform', 'translateZ(' + $('.hover').outerHeight() / 2 + 'px)');
         $('.no-ie .hover .item').on({
             mouseenter: function () {
                 $('.no-ie .information').show();
@@ -316,9 +354,9 @@
                 url: "/logout.ajax",
                 success: function (response) {
                     $('.success_text').text('Сессия завершена.');
-                    $this .addClass('lock-close');
-                    $this .removeClass('lock-open');
-                    $this.attr('href','admin');
+                    $this.addClass('lock-close');
+                    $this.removeClass('lock-open');
+                    $this.attr('href', 'admin');
                     $('#success').show();
                 }
             });

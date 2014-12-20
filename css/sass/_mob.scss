@@ -45,18 +45,34 @@
     box-shadow: 1px 3px 8px 1px rgba(13, 16, 7, .35);
   }
 
+  .information {
+    display: none;
+  }
+
   .b-menu_items-item {
     min-height: 41px;
-    a {
+    .iwrapper {
       width: 100%;
       text-align: center;
-      padding: 4px 0 4px 0;
+      min-height: 43px;
+    }
+    .caption {
+      padding: 0;
+      height: 43px;
+      line-height: 43px;
+      width: 100%;
+      &:hover {
+        color: #3ba8c0;
+      }
     }
     &.active {
       height: 43px;
     }
     &.noactive {
-      height: 41px;
+      .caption {
+        min-height: 41px;
+      }
+      min-height: 41px;
     }
   }
 
