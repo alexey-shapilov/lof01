@@ -234,6 +234,20 @@
             });
         });
 
+        $('.no-ie .information').css('height',$('.hover').outerHeight()-20);
+        $('.no-ie .item').css('height',$('.hover').outerHeight());
+        $('.no-ie .information').css('transform','rotateX(-90deg) translateZ('+$('.hover').outerHeight()/2+'px)');
+        $('.no-ie .caption').css('transform','translateZ('+$('.hover').outerHeight()/2+'px)');
+        $('.no-ie .hover .item').on({
+            mouseenter: function () {
+                $('.no-ie .information').show();
+                $(this).css('transform', 'translateZ(' + $('.hover').outerHeight() / 2 + 'px) rotateX(90deg)');
+            },
+            mouseleave: function () {
+                $(this).css('transform', 'none');
+            }
+        });
+
         // Обработчик нажатия кнопки "очистить" на странице обратной связи. Восстанавливает placeholder для ie8
         $('#clear_feedback').on('click', function (e) {
             if (!supports_input_placeholder()) {

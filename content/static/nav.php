@@ -8,9 +8,42 @@ $active_menu = $query[0];
     </div>
     <div class="b-menu">
         <ul class="b-menu_items">
-            <li class="b-menu_items-item<?= ($active_menu == 'about' ? ' active' : '') ?>"><a href="/about">Обо мне</a></li>
-            <li class="b-menu_items-item<?= ($active_menu == 'works' ? ' active' : '') ?>"><a href="/works">Мои работы</a></li>
-            <li class="b-menu_items-item<?= ($active_menu == 'feedback' ? ' active' : '') ?>"><a href="/feedback">Связаться со мной</a></li>
+            <li class="b-menu_items-item<?= ($active_menu == 'about' ? ' active' : ' hover') ?>">
+                <a href="/about">
+                    <div class="iwrapper">
+                        <div class="item">
+                            <div class="caption">Обо мне</div>
+                            <div class="information">
+                                <a href="/about">Подробная информация</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="b-menu_items-item<?= ($active_menu == 'works' ? ' active' : ' hover') ?>">
+                <a href="/works">
+                    <div class="iwrapper">
+                        <div class="item">
+                            <div class="caption">Мои работы</div>
+                            <div class="information">
+                                <a href="/works">Примеры работ</a>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li class="b-menu_items-item<?= ($active_menu == 'feedback' ? ' active' : ' hover') ?>">
+                <a href="/feedback">
+                    <div class="iwrapper">
+                        <div class="item">
+                            <div class="caption">Связаться со мной</div>
+                            <span class="information">
+                                <a href="/feedback">Форма обратной связи</a>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
         </ul>
     </div>
     <div class="b-contacts">

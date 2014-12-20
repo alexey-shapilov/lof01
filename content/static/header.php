@@ -17,7 +17,13 @@ if (!defined('INIT')) exit('No direct script access allowed');
     <link rel="stylesheet" href="/css/ie8.css"/><![endif]-->
 
 </head>
+<!--[if IE 8]>
 <body class="page-<?= $query[0] ?>">
+<![endif]-->
+<![if !(IE 8)]>
+<body class="no-ie page-<?= $query[0] ?>">
+<![endif]>
+
 <div class="wrapper">
     <div class="b-head">
         <div class="b-head-wrapper clearfix">
