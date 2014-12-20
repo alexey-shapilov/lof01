@@ -90,3 +90,8 @@
   left: -142px;
   top: 73px;
 }
+
+/* line 85, sass/ie8.scss */
+.information {
+  display: none;
+}
