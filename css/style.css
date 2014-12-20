@@ -1465,7 +1465,7 @@ h1 {
   border-top: 2px solid #3ba8c0;
 }
 /* line 177, sass/style.scss */
-.b-menu_items-item .caption, .b-menu_items-item .information {
+.b-menu_items-item .caption, .b-menu_items-item .no-ie .information {
   display: block;
   color: #959aa8;
   width: 202px;
