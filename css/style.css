@@ -1206,7 +1206,7 @@ h1 {
 .no-ie .item .caption {
   display: block;
   position: absolute;
-  top: 2px;
+  top: 0;
   -webkit-transform: translateZ(30px);
   -moz-transform: translateZ(30px);
   -ms-transform: translateZ(30px);
@@ -1228,7 +1228,6 @@ h1 {
   width: 222px;
   text-align: left;
   padding: 10px;
-  font-size: 12px;
   box-shadow: none;
   background: #ecf1f4;
   background: -moz-linear-gradient(top, #ecf1f4 0%, #becad9 100%);
@@ -1459,50 +1458,53 @@ h1 {
   font-size: 21px;
   color: #fff;
 }
-/* line 170, sass/style.scss */
+/* line 171, sass/style.scss */
 .b-menu_items-item .iwrapper {
   width: 242px;
   margin: 0 auto;
   border-top: 2px solid #3ba8c0;
 }
-/* line 175, sass/style.scss */
-.b-menu_items-item .caption {
+/* line 177, sass/style.scss */
+.b-menu_items-item .caption, .b-menu_items-item .information {
   display: block;
   color: #959aa8;
   width: 202px;
   padding: 20px 18px 19px 20px;
   margin: 0 auto;
 }
-/* line 183, sass/style.scss */
+/* line 185, sass/style.scss */
 .b-menu_items-item .item {
   display: block;
   width: 100%;
   margin: 0 auto;
 }
-/* line 189, sass/style.scss */
+/* line 191, sass/style.scss */
 .b-menu_items-item a:hover {
   color: #3ba8c0;
 }
-/* line 193, sass/style.scss */
+/* line 195, sass/style.scss */
 .b-menu_items-item:first-child .iwrapper {
   border-top: none;
 }
-/* line 197, sass/style.scss */
+/* line 199, sass/style.scss */
 .b-menu_items-item.active {
   background-color: #3ba8c0;
 }
-/* line 199, sass/style.scss */
-.b-menu_items-item.active .caption {
+/* line 201, sass/style.scss */
+.b-menu_items-item.active .iwrapper {
   border-top: none;
   cursor: default;
   pointer-events: none;
+}
+/* line 206, sass/style.scss */
+.b-menu_items-item.active .caption {
   color: #ffffff;
 }
-/* line 208, sass/style.scss */
+/* line 212, sass/style.scss */
 .b-menu_items-item.noactive .iwrapper {
   border: none;
 }
-/* line 213, sass/style.scss */
+/* line 217, sass/style.scss */
 .b-menu_items-item:first-child.active {
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;
@@ -1510,7 +1512,7 @@ h1 {
   -o-border-radius: 4px 4px 0 0;
   border-radius: 4px 4px 0 0;
 }
-/* line 216, sass/style.scss */
+/* line 220, sass/style.scss */
 .b-menu_items-item:last-child.active {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
@@ -1519,12 +1521,12 @@ h1 {
   border-radius: 0 0 4px 4px;
 }
 
-/* line 223, sass/style.scss */
+/* line 227, sass/style.scss */
 .b-contacts {
   padding-top: 1px;
   margin-top: 22px;
 }
-/* line 226, sass/style.scss */
+/* line 230, sass/style.scss */
 .b-contacts .b-contacts_items-item_caption {
   display: block;
   font-size: 21px;
@@ -1542,19 +1544,19 @@ h1 {
   padding-left: 20px;
 }
 
-/* line 240, sass/style.scss */
+/* line 244, sass/style.scss */
 .b-contacts_items {
   padding: 0;
 }
 
-/* line 245, sass/style.scss */
+/* line 249, sass/style.scss */
 .ico {
   float: left;
   width: 38px;
   height: 38px;
 }
 
-/* line 251, sass/style.scss */
+/* line 255, sass/style.scss */
 .b-contacts_items-item {
   font-size: 17px;
   color: white;
@@ -1562,31 +1564,31 @@ h1 {
   height: 39px;
   line-height: 39px;
 }
-/* line 258, sass/style.scss */
+/* line 262, sass/style.scss */
 .b-contacts_items-item a {
   color: white;
 }
-/* line 262, sass/style.scss */
+/* line 266, sass/style.scss */
 .b-contacts_items-item a:hover {
   text-decoration: underline;
 }
-/* line 266, sass/style.scss */
+/* line 270, sass/style.scss */
 .b-contacts_items-item:first-child {
   background: #41b9d4;
 }
-/* line 267, sass/style.scss */
+/* line 271, sass/style.scss */
 .b-contacts_items-item:first-child .ico {
   background: url("img/emailico.png");
 }
-/* line 272, sass/style.scss */
+/* line 276, sass/style.scss */
 .b-contacts_items-item:nth-child(2) {
   background: #48cbe8;
 }
-/* line 273, sass/style.scss */
+/* line 277, sass/style.scss */
 .b-contacts_items-item:nth-child(2) .ico {
   background: url("img/phoneico.png");
 }
-/* line 278, sass/style.scss */
+/* line 282, sass/style.scss */
 .b-contacts_items-item:last-child {
   background: #51daf8;
   -webkit-border-radius: 0 0 4px 4px;
@@ -1595,44 +1597,44 @@ h1 {
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
 }
-/* line 279, sass/style.scss */
+/* line 283, sass/style.scss */
 .b-contacts_items-item:last-child .ico {
   background: url("img/skypeico.png");
 }
 
-/* line 289, sass/style.scss */
+/* line 293, sass/style.scss */
 .b-content {
   margin-left: 6.25%;
   width: 650px;
 }
 
-/* line 294, sass/style.scss */
+/* line 298, sass/style.scss */
 .footer-push {
   height: 78px;
 }
 
-/* line 299, sass/style.scss */
+/* line 304, sass/style.scss */
 .b-footer {
   height: 78px;
   background: #eff3f7;
   position: relative;
 }
 
-/* line 305, sass/style.scss */
+/* line 310, sass/style.scss */
 .b-mob_contacts {
   display: none;
 }
 
-/* line 310, sass/style.scss */
+/* line 314, sass/style.scss */
 .b-mob_socials {
   display: none;
 }
 
-/* line 314, sass/style.scss */
+/* line 318, sass/style.scss */
 .b-footer_body {
   padding-top: 1px;
 }
-/* line 316, sass/style.scss */
+/* line 320, sass/style.scss */
 .b-footer_body p {
   font-family: fira_sanslight;
   font-size: 13px;
@@ -1641,7 +1643,7 @@ h1 {
   margin: 30px auto 0;
 }
 
-/* line 325, sass/style.scss */
+/* line 329, sass/style.scss */
 .lock {
   width: 20px;
   height: 32px;
@@ -1652,20 +1654,20 @@ h1 {
   cursor: pointer;
 }
 
-/* line 335, sass/style.scss */
+/* line 339, sass/style.scss */
 .lock-close {
   background-position: 0;
 }
-/* line 337, sass/style.scss */
+/* line 341, sass/style.scss */
 .lock-close:hover {
   background-position: -20px;
 }
 
-/* line 342, sass/style.scss */
+/* line 346, sass/style.scss */
 .lock-open {
   background-position: -20px;
 }
-/* line 344, sass/style.scss */
+/* line 348, sass/style.scss */
 .lock-open:hover {
   background-position: 0;
 }

@@ -34,7 +34,7 @@
 .no-ie .item .caption {
   display: block;
   position: absolute;
-  top: 2px;
+  top: 0;
   -webkit-transform: translateZ(30px);
   -moz-transform: translateZ(30px);
   -ms-transform: translateZ(30px);
@@ -55,7 +55,7 @@
   width: 222px;
   text-align: left;
   padding: 10px;
-  font-size: 12px;
+//  font-size: 12px;
   box-shadow: none;
   background: rgb(236, 241, 244);
   background: -moz-linear-gradient(top, rgba(236, 241, 244, 1) 0%, rgba(190, 202, 217, 1) 100%);

@@ -13,9 +13,9 @@ $active_menu = $query[0];
                     <div class="iwrapper">
                         <div class="item">
                             <div class="caption">Обо мне</div>
-                            <div class="information">
-                                <a href="/about">Подробная информация</a>
-                            </div>
+                            <span class="information">
+                                Подробная информация
+                            </span>
                         </div>
                     </div>
                 </a>
@@ -25,9 +25,9 @@ $active_menu = $query[0];
                     <div class="iwrapper">
                         <div class="item">
                             <div class="caption">Мои работы</div>
-                            <div class="information">
-                                <a href="/works">Примеры работ</a>
-                            </div>
+                            <span class="information">
+                                Примеры работ
+                            </span>
                         </div>
                     </div>
                 </a>
@@ -38,7 +38,7 @@ $active_menu = $query[0];
                         <div class="item">
                             <div class="caption">Связаться со мной</div>
                             <span class="information">
-                                <a href="/feedback">Форма обратной связи</a>
+                                Форма обратной связи
                             </span>
                         </div>
                     </div>
