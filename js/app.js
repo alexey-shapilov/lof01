@@ -7,6 +7,7 @@
                 matches: false
             },
             mob = false;
+
         if (window.matchMedia) {
             media_query_lt320 = window.matchMedia("screen and (max-width: 750px)");
             if (media_query_lt320.matches) {
@@ -16,6 +17,10 @@
             media_query_lt320.addListener(function (m) {
                 if (m.matches) {
                     mob = true;
+                    $('.information').hide();
+                    $('.no-ie .hover .item').unbind();
+                    clearStyle('.no-ie .hover .information','.no-ie .hover .item',
+                        '.no-ie .hover .information','.no-ie .hover .caption');
                     $('.b-menu_items-item').each(function () {
                         var $this = $(this);
                         if ($this.hasClass('hover')) {
@@ -26,14 +31,24 @@
                     mob = false;
                     $('.b-menu_items-item').each(function () {
                         var $this = $(this);
-                        if (!$this.hasClass('hover') && !this.hasClass('active')) {
+                        if (!$this.hasClass('hover') && !$this.hasClass('active')) {
                             $this.addClass('hover');
+                        }
+                    });
+                    $('.no-ie .hover .item').on({
+                        mouseenter: function () {
+                            $(this).find('.information').show();
+                            $(this).css('transform', 'translateZ(' + $('.hover').outerHeight() / 2 + 'px) rotateX(90deg)');
+                        },
+                        mouseleave: function () {
+                            $(this).css('transform', 'none');
                         }
                     });
                 }
             });
         }
 
+// для адаптации вращения меню под разные устройства
         if (mob) {
             $('.b-menu_items-item').each(function () {
                 var $this = $(this);
@@ -41,7 +56,6 @@
                     $this.removeClass('hover');
                 }
             });
-            $('.no-ie .hover .item').unbind();
         } else {
             $('.b-menu_items-item').each(function () {
                 var $this = $(this);
@@ -49,9 +63,10 @@
                     $this.addClass('hover');
                 }
             });
+
             $('.no-ie .hover .item').on({
                 mouseenter: function () {
-                    $('.no-ie .information').show();
+                    $(this).find('.information').show();
                     $(this).css('transform', 'translateZ(' + $('.hover').outerHeight() / 2 + 'px) rotateX(90deg)');
                 },
                 mouseleave: function () {
@@ -59,6 +74,12 @@
                 }
             });
         }
+
+        $('.no-ie .hover .information').css('height', $('.b-menu_items-item').outerHeight() - 20);
+        $('.no-ie .hover .item').css('height', $('.b-menu_items-item').outerHeight());
+        $('.no-ie .hover .information').css('transform', 'rotateX(-90deg) translateZ(' + $('.b-menu_items-item').outerHeight() / 2 + 'px)');
+        $('.no-ie .hover .caption').css('transform', 'translateZ(' + $('.b-menu_items-item').outerHeight() / 2 + 'px)');
+// ======================================================
 
         $('.active').next().toggleClass('noactive'); // применяет класс к следующему элементу после активного в меню
 
@@ -270,20 +291,6 @@
                     $this.toggleClass('error');
                 }
             });
-        });
-
-        $('.no-ie .information').css('height', $('.hover').outerHeight() - 20);
-        $('.no-ie .item').css('height', $('.hover').outerHeight());
-        $('.no-ie .information').css('transform', 'rotateX(-90deg) translateZ(' + $('.hover').outerHeight() / 2 + 'px)');
-        $('.no-ie .caption').css('transform', 'translateZ(' + $('.hover').outerHeight() / 2 + 'px)');
-        $('.no-ie .hover .item').on({
-            mouseenter: function () {
-                $('.no-ie .information').show();
-                $(this).css('transform', 'translateZ(' + $('.hover').outerHeight() / 2 + 'px) rotateX(90deg)');
-            },
-            mouseleave: function () {
-                $(this).css('transform', 'none');
-            }
         });
 
         // Обработчик нажатия кнопки "очистить" на странице обратной связи. Восстанавливает placeholder для ie8
@@ -511,4 +518,10 @@ function getCoords(elem) {
     var left = box.left + scrollLeft - clientLeft;
 
     return {top: Math.round(top), left: Math.round(left)};
+}
+
+function clearStyle() {
+    for (var i=0;i<arguments.length;i++) {
+        $(arguments[i]).attr('style', '');
+    }
 }
